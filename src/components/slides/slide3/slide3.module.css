@@ -1,0 +1,60 @@
+.container{
+    width: 100%;
+    height: 772px;
+    background: linear-gradient(302deg, #F4B63A 0%, #F46219 100%);
+    /* overflow-y: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.shopLink{
+    width: 220px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #181818;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.circle{
+    width: 497px;
+    height: 497px;
+    border-radius: 50%;
+    background: radial-gradient(139.49% 139.49% at 27.97% 44.47%, #F4B63A 0%, #F46219 100%);
+    box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.image1{
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+
+.image2{
+    position: absolute;
+    top: 120px;
+    left: 60px;
+}

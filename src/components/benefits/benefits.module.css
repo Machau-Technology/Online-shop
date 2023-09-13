@@ -1,0 +1,38 @@
+.container{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    background-color: #F2F2F2;
+}
+
+.item{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.gif{
+    border-radius: 50%;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.upper{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.lower{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,0 +1,116 @@
+.container{
+
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    gap: 280px;
+    width: 100%;
+    height: 926px;
+    background: linear-gradient(112deg, rgba(245, 182, 58, 0.90) 0%, rgba(245, 181, 58, 0.90) 96.54%);
+}
+
+.slideProduct{
+    position: relative;
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+    color: #181818;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.pCarousel{
+    width: 1250px;
+    height: 400px;
+    margin-left: 100px;
+    position: absolute;
+    top: -100px;
+    left: 30px;
+}
+
+.liner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 90px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.info{
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.amount{
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 48px;
+    width: 160px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.calc{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.shopLink{
+    width: 220px;
+    z-index: 10;
+}
+
+.btn2{
+    width: 220px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #181818;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}

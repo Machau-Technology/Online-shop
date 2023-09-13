@@ -1,0 +1,140 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+    margin: 130px 0;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.heading{
+    color: #1E2A39;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.headDesc{
+    width: 820px;
+    color: rgba(0, 0, 0, 0.58);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.info{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.infoHead{
+    color: #1E2A39;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.infoDesc{
+    color: rgba(0, 0, 0, 0.58);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.valuesSection{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    background: #F5BC4D;
+    height: 470px;
+    width: 100%;
+}
+
+.valHead{
+    color: #1E2A39;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.05px;
+}
+
+.values{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.valCard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 300px;
+    height: 275px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FFF;
+    box-shadow: 0px 10px 80px -16px rgba(0, 0, 0, 0.15);
+}
+
+.gif{
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.valTitle{
+    color: #1E2A39;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    margin-top: 15px;
+}
+
+.valDesc{
+    color: rgba(0, 0, 0, 0.58);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.3px;
+}

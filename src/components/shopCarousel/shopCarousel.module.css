@@ -1,0 +1,37 @@
+.slider{
+    width: 100%;
+}
+
+.imageSection{
+    padding: 30px 450px;
+    height: 100%;
+}
+
+
+/* .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.sideView{
+    margin-left: 160px;
+}
+
+.sticker1{
+    margin-left: -100px;
+}
+
+.sticker2{
+    margin-left: -110px;
+    margin-top: 70px;
+}
+
+.sticker3{
+    margin-left: -110px;
+}
+
+.sticker4{
+    margin-left: -110px;
+    margin-top: -40px;
+}
