@@ -13,20 +13,25 @@ const getInitialStep = (pathname) => {
     } else if (pathname.includes('/shop/payment')) {
         return 'payment';
     } else {
-        console.log("called");
+        // console.log("called");
         return 'shipping';
     }
 }
 
 export function FormDataProvider({ children }) {
 
-    const router = useRouter();
+    // const router = useRouter();
     const path = usePathname();
     const initialStep = getInitialStep(path);
-    console.log(path);
+    // console.log(path);
 
     const [activeStep, setActiveStep] = useState(initialStep);
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({
+        tagCount: 1,
+        stickerCount: 1,
+        tagShop: false,
+        stickerShop: false,
+    });
     const [stepStatus, setStepStatus] = useState({
         shipping: false,
         account: false,

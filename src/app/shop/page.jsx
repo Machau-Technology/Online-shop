@@ -1,10 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import styles from "./page.module.css"
 import ShopCarousel from '@/components/shopCarousel/ShopCarousel'
 import Benefits from '@/components/benefits/Benefits'
 import Overview from '@/components/overview/Overview'
 import Reviews from '@/components/reviews/Reviews'
 import Link from 'next/link'
+import { useFormData } from '@/context/shoppingContext/ShoppingContext'
 
 const Shop = () => {
 
@@ -39,6 +41,28 @@ const Shop = () => {
         }
     ];
 
+    const { formData, setFormData } = useFormData();
+    const [tagCount, setTagCount] = useState(formData.tagCount);
+    const [tagShop, setTagShop] = useState(formData.tagShop);
+    const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+
+    const updateTagCount = (count) => {
+
+        // console.log("called");
+
+        if (count < 1) {
+            return;
+        }
+        setTagCount(count);
+        setFormData({ ...formData, tagCount: count });
+    };
+
+    const updateCategory = () => {
+        setStickerShop(false);
+        setTagShop(true);
+        setFormData({ ...formData, stickerShop: false, tagShop: true });
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.slider}>
@@ -54,13 +78,30 @@ const Shop = () => {
                         <span className={styles.info}>Tech specs</span>
                     </div>
                     <div className={styles.right}>
-                        <span className={styles.amount}>₹999</span>
+                        <span className={styles.amount}>{`₹${999 * tagCount}`}</span>
                         <button className={styles.btn1}>
-                            <span className={styles.calc}><b>--</b></span>
-                            <span className={styles.calc}>1</span>
-                            <span className={styles.calc}><b>+</b> </span>
+                            <span
+                                className={styles.calc}
+                                onClick={() => updateTagCount(tagCount - 1)}
+                            ><b>--</b></span>
+                            <span className={styles.calc}>{tagCount}</span>
+                            <span
+                                className={styles.calc}
+                                onClick={() => updateTagCount(tagCount + 1)}
+                            >
+                                <b>+</b>
+                            </span>
                         </button>
-                        <Link href="/shop/shipping" className={styles.shopLink}><button className={styles.btn2}>Shop now</button></Link>
+                        <Link
+                            href="/shop/shipping"
+                            className={styles.shopLink}
+                        >
+                            <button
+                                className={styles.btn2}
+                                onClick={updateCategory}
+                            >Shop now
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
