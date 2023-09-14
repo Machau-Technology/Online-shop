@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 100px 0px 0px 0px;
+    max-height: 2000px;
+}
+
+.head{
+    color: #1E2A39;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+}
+
+.main{
+    width: 825px;
+}

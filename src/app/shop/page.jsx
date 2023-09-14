@@ -7,6 +7,8 @@ import Overview from '@/components/overview/Overview'
 import Reviews from '@/components/reviews/Reviews'
 import Link from 'next/link'
 import { useFormData } from '@/context/shoppingContext/ShoppingContext'
+import Specs from '@/components/specs/Specs'
+import Faqs from '@/components/faqs/Faqs'
 
 const Shop = () => {
 
@@ -110,6 +112,8 @@ const Shop = () => {
             <div className={styles.overview}>
                 <Overview />
             </div>
+            <Specs />
+            <Faqs />
             <Reviews />
         </div>
     )
