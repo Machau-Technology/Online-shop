@@ -81,6 +81,12 @@
     position: relative;
 }
 
+.icon{
+    width: 70px;
+    height: 70px;
+    background-color: #000;
+}
+
 .productDetails{
     display: flex;
     flex-direction: column;
@@ -100,7 +106,7 @@
     font-style: normal;
 }
 
-.qt{
+/* .qt{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -117,6 +123,28 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
+} */
+
+.btn1{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 48px;
+    width: 160px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.calc{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -2px;
+    cursor: pointer;
 }
 
 .billing{

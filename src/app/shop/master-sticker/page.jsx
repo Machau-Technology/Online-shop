@@ -1,10 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import styles from "./page.module.css"
 import ShopCarousel from '@/components/shopCarousel/ShopCarousel'
 import Benefits from '@/components/benefits/Benefits'
-import Overview from '@/components/overview/Overview'
 import Reviews from '@/components/reviews/Reviews'
 import Link from 'next/link'
+import StickOverview from '@/components/stickOverview/StickOverview'
+import { useFormData } from '@/context/shoppingContext/ShoppingContext'
 
 const MasterStickerShop = () => {
 
@@ -39,6 +41,17 @@ const MasterStickerShop = () => {
         }
     ];
 
+    const { formData, setFormData } = useFormData();
+    const [tagCount, setTagCount] = useState(formData.tagCount);
+    const [tagShop, setTagShop] = useState(formData.tagShop);
+    const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+
+    const updateCategory = () => {
+        setStickerShop(true);
+        setTagShop(false);
+        setFormData({ ...formData, stickerShop: true, tagShop: false });
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.slider}>
@@ -55,14 +68,24 @@ const MasterStickerShop = () => {
                     </div>
                     <div className={styles.right}>
                         <button className={styles.btn1}>Free</button>
-                        <Link href="/shop/shipping" className={styles.shopLink}><button className={styles.btn2}>Buy now</button></Link>
+                        <Link
+                            href="/shop/shipping"
+                            className={styles.shopLink}
+                        >
+                            <button
+                                className={styles.btn2}
+                                onClick={updateCategory}
+                            >
+                                Buy now
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
 
             <Benefits />
             <div className={styles.overview}>
-                <Overview />
+                <StickOverview />
             </div>
             <Reviews />
         </div>

@@ -28,9 +28,11 @@ export function FormDataProvider({ children }) {
     const [activeStep, setActiveStep] = useState(initialStep);
     const [formData, setFormData] = useState({
         tagCount: 1,
-        stickerCount: 1,
+        stickerCount: 0,
         tagShop: false,
         stickerShop: false,
+        tagPrice: 999,
+        stickerPrice: 0,
     });
     const [stepStatus, setStepStatus] = useState({
         shipping: false,

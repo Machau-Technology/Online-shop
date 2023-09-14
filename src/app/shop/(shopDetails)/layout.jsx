@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./shopDetailsLayout.module.css"
 import { useFormData } from "@/context/shoppingContext/ShoppingContext";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function ShopDetailsLayout({ children }) {
 
@@ -20,6 +21,32 @@ export default function ShopDetailsLayout({ children }) {
             router.push('/shop/shipping');
         }
     }
+
+    const { formData, setFormData } = useFormData();
+    const [tagCount, setTagCount] = useState(formData.tagCount);
+    const [stickerCount, setStickerCount] = useState(formData.stickerCount);
+    const [tagShop, setTagShop] = useState(formData.tagShop);
+    const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+
+    const updateTagCountTag = (count) => {
+
+        // console.log("called");
+
+        if (count < 1) {
+            return;
+        }
+        setTagCount(count);
+        setFormData({ ...formData, tagCount: count });
+    };
+
+    const updateTagCountSticker = (count) => {
+
+        if (count < 1) {
+            return;
+        }
+        setStickerCount(count);
+        setFormData({ ...formData, stickerCount: count });
+    };
 
     return (
         <div className={styles.container}>
@@ -70,17 +97,53 @@ export default function ShopDetailsLayout({ children }) {
                     <span className={styles.summary}>Order Summary</span>
                     <div className={styles.productList}>
                         <div className={styles.product}>
-                            <Image
-                                src="/assets/Cup.png"
-                                width={70}
-                                height={70}
-                                alt="product"
-                            />
+                            <div className={styles.icon}></div>
                             <div className={styles.productDetails}>
-                                <span className={styles.productCat}>MasterSticker Free Bucket</span>
-                                <span className={styles.productName}>MS075 + MS100 + MS150</span>
+                                {(tagShop) &&
+                                    <span className={styles.productCat}>
+                                        MasterTag
+                                    </span>
+                                }
+                                {(stickerShop) &&
+                                    <>
+                                        <span className={styles.productCat}>
+                                            MasterSticker Free Bucket
+                                        </span>
+                                        <span className={styles.productName}>MS075 + MS100 + MS150</span>
+                                    </>
+                                }
                             </div>
-                            <button className={styles.qt}>1 Pack</button>
+
+                            {(tagShop) &&
+                                <button className={styles.btn1}>
+                                    <span
+                                        className={styles.calc}
+                                        onClick={() => updateTagCountTag(tagCount - 1)}
+                                    ><b>--</b></span>
+                                    <span className={styles.calc}>{tagCount}</span>
+                                    <span
+                                        className={styles.calc}
+                                        onClick={() => updateTagCountTag(tagCount + 1)}
+                                    >
+                                        <b>+</b>
+                                    </span>
+                                </button>
+                            }
+                            {(stickerShop) &&
+                                <button className={styles.btn1}>
+                                    <span
+                                        className={styles.calc}
+                                        onClick={() => updateTagCountSticker(stickerCount - 1)}
+                                    ><b>--</b></span>
+                                    <span className={styles.calc}>{stickerCount}</span>
+                                    <span
+                                        className={styles.calc}
+                                        onClick={() => updateTagCountSticker(stickerCount + 1)}
+                                    >
+                                        <b>+</b>
+                                    </span>
+                                </button>
+                            }
                         </div>
                     </div>
                 </div>
