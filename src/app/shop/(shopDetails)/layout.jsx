@@ -69,7 +69,7 @@ export default function ShopDetailsLayout({ children }) {
                         />
                     }
 
-                    <span className={styles.line}>----</span>
+                    {/* <span className={styles.line}>----</span>
                     <span className={`${styles.step} ${activeStep === 'account' && styles.active}`} onClick={handleAccountClick}>Account</span>
                     <span className={styles.line}>----</span>
                     {stepStatus.account ?
@@ -85,7 +85,7 @@ export default function ShopDetailsLayout({ children }) {
                             height={30}
                             alt="check"
                         />
-                    }
+                    } */}
                     <span className={styles.line}>----</span>
                     <span className={`${styles.step} ${activeStep === 'payment' && styles.active}`}>Payment</span>
                 </div>

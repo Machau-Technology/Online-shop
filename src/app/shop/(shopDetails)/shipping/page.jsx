@@ -6,6 +6,8 @@ import * as Yup from 'yup'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useFormData } from '@/context/shoppingContext/ShoppingContext'
+// import axios from 'axios'
+import { axiosInstance } from '@/components/Const'
 
 const Shipping = () => {
 
@@ -89,12 +91,21 @@ const Shipping = () => {
                     email: '',
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(values, { setSubmitting }) => {
-                    setFormData({ ...values });
-                    router.push('/shop/account');
-                    setStepStatus({ ...stepStatus, shipping: true });
-                    setActiveStep('account');
-                    setSubmitting(false);
+                onSubmit={async (values, { setSubmitting }) => {
+                    try {
+                        // setFormData({ ...values });
+                        // router.push('/shop/payment');
+
+                        setStepStatus({ ...stepStatus, shipping: true });
+                        setActiveStep('payment');
+
+                        const response = await axiosInstance.post("", formData);
+
+                    } catch (error) {
+                        console.error('Error making POST request:', error);
+                    } finally {
+                        setSubmitting(false);
+                    }
                 }}
             >
                 {({ isSubmitting, handleChange, values, setFieldValue, touched, errors }) => (
@@ -216,7 +227,7 @@ const Shipping = () => {
                                 className={styles.submit}
                                 disabled={isSubmitting}
                             >
-                                Account
+                                Payment
                             </button>
                         </div>
                     </Form>
