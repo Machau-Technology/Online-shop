@@ -1,17 +1,17 @@
 .empty{
-    width: 1533px;
-    height: 105px;
+    width: 100vw;
+    height: 75px;
 }
 
 .container{
-    width: 1533px;
-    height: 105px;
+    width: 100%;
+    height: 75px;
     background: #FFF;
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.10);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 6%;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -38,6 +38,7 @@
 }
 
 .shopBtn{
+    display: block;
     width: 220px;
     height: 48px;
     border-radius: 10px;
@@ -52,4 +53,31 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
+}
+.shopBtnMob{
+    display: none;
+}
+.limg{
+    width: 59px;
+    height: 59px;
+}
+
+@media screen and (max-width: 464px) {
+    .shopBtn{
+        display: none;
+    }
+    .shopBtnMob{
+        display: block;
+
+    }
+    .limg{
+        width: 40px;
+        height: 40px;
+        margin: 6px 0 0 0;
+    }
+    .container{
+        width: 100%;
+        height: 58px;
+    }
+
 }

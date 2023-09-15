@@ -30,6 +30,7 @@ const Find = () => {
             </div>
             <div className={styles.right}>
                 <Image
+                className={styles.phonewk}
                     src="/assets/PhoneWithKey.svg"
                     width={684}
                     height={684}

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./threeDView.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
+// import ThreeScene from './Threescene'
 
 const ThreeDView = () => {
     return (
@@ -13,6 +14,7 @@ const ThreeDView = () => {
                 </div>
                 <span className={styles.desc}>MasterTag 360 Degree View</span>
             </div>
+            {/* <ThreeScene/> */}
             <Image
                 src="/assets/Device1.png"
                 alt='Device1'

@@ -26,6 +26,7 @@ export function FormDataProvider({ children }) {
     // console.log(path);
 
     const loadInitialData = () => {
+        
         const storedData = sessionStorage.getItem('formData');
 
         if (storedData) {

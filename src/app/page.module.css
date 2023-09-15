@@ -3,6 +3,6 @@
 }
 
 .carousel{
-    width: 1533px;
-    height: 772px;
+    width: 100vw;
+    height: auto;
 }

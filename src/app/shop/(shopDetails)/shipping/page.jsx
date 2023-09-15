@@ -112,7 +112,6 @@ const Shipping = () => {
 
                         router.push(response.data)
 
-
                     } catch (error) {
                         console.error('Error making POST request:', error);
                     } finally {
@@ -120,6 +119,8 @@ const Shipping = () => {
                     }
                 }}
             >
+
+
                 {({ isSubmitting, handleChange, values, setFieldValue, touched, errors }) => (
                     <Form className={styles.form}>
                         <div className={`${styles.row} ${styles.contact}`}>
