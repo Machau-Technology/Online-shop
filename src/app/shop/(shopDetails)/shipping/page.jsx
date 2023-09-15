@@ -99,7 +99,13 @@ const Shipping = () => {
                         setStepStatus({ ...stepStatus, shipping: true });
                         setActiveStep('payment');
 
-                        const response = await axiosInstance.post("", formData);
+                        
+
+                        const response = await axiosInstance.post("/", formData);
+                        console.log(response.data);
+
+                        router.push(response.data)
+                        
 
                     } catch (error) {
                         console.error('Error making POST request:', error);
