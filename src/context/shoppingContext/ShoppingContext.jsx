@@ -26,7 +26,7 @@ export function FormDataProvider({ children }) {
     // console.log(path);
 
     const loadInitialData = () => {
-        const storedData = localStorage.getItem('formData');
+        const storedData = sessionStorage.getItem('formData');
 
         if (storedData) {
             return JSON.parse(storedData);
@@ -53,7 +53,7 @@ export function FormDataProvider({ children }) {
     });
 
     useEffect(() => {
-        localStorage.setItem('formData', JSON.stringify(formData)); // Use localStorage or sessionStorage as needed
+        sessionStorage.setItem('formData', JSON.stringify(formData)); // Use localStorage or sessionStorage as needed
     }, [formData]);
 
     useEffect(() => {
