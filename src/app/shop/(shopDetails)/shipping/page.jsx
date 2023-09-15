@@ -93,19 +93,25 @@ const Shipping = () => {
                 validationSchema={validationSchema}
                 onSubmit={async (values, { setSubmitting }) => {
                     try {
-                        // setFormData({ ...values });
+                        // await setFormData({ ...formData, ...values });
                         // router.push('/shop/payment');
+
+                        const data = { ...formData, ...values };
+
+                        console.log(data);
+
+                        // console.log(values);
 
                         setStepStatus({ ...stepStatus, shipping: true });
                         setActiveStep('payment');
 
-                        
 
-                        const response = await axiosInstance.post("/", formData);
+
+                        const response = await axiosInstance.post("/", data);
                         console.log(response.data);
 
                         router.push(response.data)
-                        
+
 
                     } catch (error) {
                         console.error('Error making POST request:', error);
