@@ -47,25 +47,24 @@ const Shop = () => {
     const [tagCount, setTagCount] = useState(formData.tagCount);
     const [tagShop, setTagShop] = useState(formData.tagShop);
     const [stickerShop, setStickerShop] = useState(formData.stickerShop);
-    const [price, setPrice] = useState(formData.price);
+    const [tagPrice, setTagPrice] = useState(formData.tagPrice);
 
 
     const updateTagCount = (count) => {
-
-        // console.log("called");
 
         if (count < 1) {
             return;
         }
         setTagCount(count);
-        setPrice(tagCount*999)
-        setFormData({ ...formData, tagCount: count, price:price });
+        setTagPrice(count * 999)
+        setFormData({ ...formData, tagCount: count, tagPrice: count * 999 });
     };
 
     const updateCategory = () => {
         setStickerShop(false);
         setTagShop(true);
-        setFormData({ ...formData, stickerShop: false, tagShop: true });
+        setTagPrice(999 * tagCount);
+        setFormData({ ...formData, stickerShop: false, tagShop: true, tagPrice: 999 * tagCount });
     }
 
     return (
@@ -83,7 +82,7 @@ const Shop = () => {
                         <span className={styles.info}>Tech specs</span>
                     </div>
                     <div className={styles.right}>
-                        <span className={styles.amount}>{`₹${999 * tagCount}`}</span>
+                        <span className={styles.amount}>₹{tagPrice}</span>
                         <button className={styles.btn1}>
                             <span
                                 className={styles.calc}

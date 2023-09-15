@@ -25,25 +25,36 @@ export function FormDataProvider({ children }) {
     const initialStep = getInitialStep(path);
     // console.log(path);
 
-    const [activeStep, setActiveStep] = useState(initialStep);
-    const [formData, setFormData] = useState({
-        tagCount: 1,
-        stickerCount: 1,
-        tagShop: false,
-        stickerShop: false,
-        tagPrice: 999,
-        stickerPrice: 99,
-        price: 0,
+    const loadInitialData = () => {
+        const storedData = localStorage.getItem('formData');
 
-        userId: "sharmaratnesh213@gmail.com",
-        amount: 100,
-        mobileNumber: 9199921385
-    });
+        if (storedData) {
+            return JSON.parse(storedData);
+        }
+
+        return {
+            tagCount: 1,
+            stickerCount: 1,
+            tagShop: false,
+            stickerShop: false,
+            tagPrice: 999,
+            stickerPrice: 99,
+
+        };
+    };
+
+    const [activeStep, setActiveStep] = useState(initialStep);
+    const [formData, setFormData] = useState(loadInitialData);
+
     const [stepStatus, setStepStatus] = useState({
         shipping: false,
         account: false,
         payment: false,
     });
+
+    useEffect(() => {
+        localStorage.setItem('formData', JSON.stringify(formData)); // Use localStorage or sessionStorage as needed
+    }, [formData]);
 
     useEffect(() => {
         setActiveStep(getInitialStep(path));

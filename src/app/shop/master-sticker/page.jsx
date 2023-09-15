@@ -42,14 +42,28 @@ const MasterStickerShop = () => {
     ];
 
     const { formData, setFormData } = useFormData();
-    const [tagCount, setTagCount] = useState(formData.tagCount);
+    const [stickerCount, setStickerCount] = useState(formData.stickerCount);
     const [tagShop, setTagShop] = useState(formData.tagShop);
     const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+    const [stickerPrice, setStickerPrice] = useState(formData.stickerPrice);
+
+    const updateStickerCount = (count) => {
+
+        if (count < 1) {
+            return;
+        }
+
+        setStickerCount(count);
+        setStickerPrice(count * 99);
+        setFormData({ ...formData, stickerCount: count, stickerPrice: count * 99 });
+    };
 
     const updateCategory = () => {
+
         setStickerShop(true);
         setTagShop(false);
-        setFormData({ ...formData, stickerShop: true, tagShop: false });
+        setStickerPrice(stickerCount * 99);
+        setFormData({ ...formData, stickerShop: true, tagShop: false, stickerPrice: stickerCount * 99 });
     }
 
     return (
@@ -67,7 +81,20 @@ const MasterStickerShop = () => {
                         <span className={styles.info}>Tech specs</span>
                     </div>
                     <div className={styles.right}>
-                        <button className={styles.btn1}>Free</button>
+                        <span className={styles.amount}>₹{stickerPrice}</span>
+                        <button className={styles.btn1}>
+                            <span
+                                className={styles.calc}
+                                onClick={() => updateStickerCount(stickerCount - 1)}
+                            ><b>--</b></span>
+                            <span className={styles.calc}>{stickerCount}</span>
+                            <span
+                                className={styles.calc}
+                                onClick={() => updateStickerCount(stickerCount + 1)}
+                            >
+                                <b>+</b>
+                            </span>
+                        </button>
                         <Link
                             href="/shop/shipping"
                             className={styles.shopLink}
@@ -75,8 +102,7 @@ const MasterStickerShop = () => {
                             <button
                                 className={styles.btn2}
                                 onClick={updateCategory}
-                            >
-                                Buy now
+                            >Shop now
                             </button>
                         </Link>
                     </div>
