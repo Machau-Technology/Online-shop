@@ -32,7 +32,8 @@ export function FormDataProvider({ children }) {
         tagShop: false,
         stickerShop: false,
         tagPrice: 999,
-        stickerPrice: 0,
+        stickerPrice: 99,
+        price: 0,
 
         userId: "sharmaratnesh213@gmail.com",
         amount: 100,

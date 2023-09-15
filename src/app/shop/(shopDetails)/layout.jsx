@@ -27,6 +27,8 @@ export default function ShopDetailsLayout({ children }) {
     const [stickerCount, setStickerCount] = useState(formData.stickerCount);
     const [tagShop, setTagShop] = useState(formData.tagShop);
     const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+    const [price, setPrice] = useState(formData.price);
+
 
     const updateTagCountTag = (count) => {
 
@@ -36,7 +38,8 @@ export default function ShopDetailsLayout({ children }) {
             return;
         }
         setTagCount(count);
-        setFormData({ ...formData, tagCount: count });
+        setPrice(tagCount*999)
+        setFormData({ ...formData, tagCount: count, price:price });
     };
 
     const updateTagCountSticker = (count) => {
@@ -45,8 +48,12 @@ export default function ShopDetailsLayout({ children }) {
             return;
         }
         setStickerCount(count);
-        setFormData({ ...formData, stickerCount: count });
+        setPrice(stickerCount*99)
+        setFormData({ ...formData, stickerCount: count, price:price });
     };
+
+    console.log(stickerCount);
+    console.log(tagCount);
 
     return (
         <div className={styles.container}>
@@ -148,10 +155,11 @@ export default function ShopDetailsLayout({ children }) {
                     </div>
                 </div>
 
+                {(tagShop) &&
                 <div className={styles.billing}>
                     <div className={styles.billRow}>
                         <span className={styles.billCat}>Sub total</span>
-                        <span className={styles.billAmt}>₹0.00</span>
+                        <span className={styles.billAmt}>₹{price}</span>
                     </div>
                     <div className={styles.billRow}>
                         <span className={styles.billCat}>Tax</span>
@@ -159,13 +167,41 @@ export default function ShopDetailsLayout({ children }) {
                     </div>
                     <div className={styles.billRow}>
                         <span className={styles.billCat}>Shipping</span>
-                        <span className={styles.shipAmt}>₹100</span>
+                        <span className={styles.shipAmt}>
+                            FREE
+                            </span>
                     </div>
                     <div className={styles.totRow}>
                         <span className={styles.tot}>Total</span>
-                        <span className={styles.totAmt}>₹100.00</span>
+                        <span className={styles.totAmt}>
+                            
+                        ₹{price}
+                            </span>
                     </div>
                 </div>
+                }
+
+            {(stickerShop) &&
+                <div className={styles.billing}>
+                    <div className={styles.billRow}>
+                        <span className={styles.billCat}>Sub total</span>
+                        <span className={styles.billAmt}>₹{price}</span>
+                    </div>
+                    <div className={styles.billRow}>
+                        <span className={styles.billCat}>Tax</span>
+                        <span className={styles.billAmt}>Included</span>
+                    </div>
+                    <div className={styles.billRow}>
+                        <span className={styles.billCat}>Shipping</span>
+                        <span className={styles.shipAmt}>FREE</span>
+                    </div>
+                    <div className={styles.totRow}>
+                        <span className={styles.tot}>Total</span>
+                        <span className={styles.totAmt}>₹{price}</span>
+                    </div>
+                </div>
+                }
+
             </div>
         </div>
     );

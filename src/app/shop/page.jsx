@@ -47,6 +47,8 @@ const Shop = () => {
     const [tagCount, setTagCount] = useState(formData.tagCount);
     const [tagShop, setTagShop] = useState(formData.tagShop);
     const [stickerShop, setStickerShop] = useState(formData.stickerShop);
+    const [price, setPrice] = useState(formData.price);
+
 
     const updateTagCount = (count) => {
 
@@ -56,7 +58,8 @@ const Shop = () => {
             return;
         }
         setTagCount(count);
-        setFormData({ ...formData, tagCount: count });
+        setPrice(tagCount*999)
+        setFormData({ ...formData, tagCount: count, price:price });
     };
 
     const updateCategory = () => {
