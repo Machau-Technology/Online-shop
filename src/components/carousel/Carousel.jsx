@@ -18,6 +18,7 @@ const Carousel = ({ items }) => {
         autoplay: false,
         autoplaySpeed: 3000,
         pauseOnHover: false,
+        
         appendDots: dots => (
             <div style={{ position: 'absolute', bottom: '45px', left: '50%', transform: 'translateX(-50%)' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>

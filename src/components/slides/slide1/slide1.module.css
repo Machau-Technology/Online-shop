@@ -17,6 +17,7 @@
 }
 
 .line{
+    display: block;
     width: 0;
     height: 178px;
     border-left: 1px solid #2C2C2C;
@@ -42,7 +43,11 @@
 }
 
 .shopLink{
+    display: block;
     width: 220px;
+}
+.shopLink2{
+    display: none;
 }
 
 .btn{
@@ -81,4 +86,88 @@
     position: absolute;
     top: 80px;
     left: 60px;
+}
+
+@media screen and (max-width: 464px) {
+    
+    .container{
+        width: 100%;
+        height: 39rem;
+        background: linear-gradient(302deg, #F46219 0%, #F4B63A 100%);
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        padding: 10% 0 0 0;
+    }
+
+    .image{
+        position:static;
+        height: 244px;
+        margin: 5% 0 0 7%;
+    }
+    .circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: radial-gradient(139.49% 139.49% at 27.97% 44.47%, #F4B63A 0%, #F46219 100%);
+        box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   .line{
+    display: none;
+}
+.modern{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.save{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+.shopLink{
+    display: none;
+}
+.shopLink2{
+    display: block;
+    width: 120px;
+    margin: 14% 0 10% 0;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12% 0 0 0;
+}
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(139.49% 139.49% at 27.97% 44.47%, #F4B63A 0%, #F46219 100%);
+    box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.btn{
+    border-radius: 20px;
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+}
+
 }

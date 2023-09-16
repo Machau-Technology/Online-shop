@@ -73,7 +73,35 @@
     gap: 30px;
     padding: 10% 0 10% 0;
     }
-
-
+    .shop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 125px;
+        height: 35px;
+        background-color: #000;
+        border-radius: 20px;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .normal{
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    
+    .bold{
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .desc{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+    }
 
 }
