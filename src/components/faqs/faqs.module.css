@@ -1,4 +1,5 @@
 .container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,4 +19,18 @@
 
 .main{
     width: 825px;
+}
+
+@media screen and (max-width: 464px) {
+
+    .head{
+        font-size: 24px;
+        letter-spacing: normal;
+    }
+
+    .main{
+        width: 86%;
+    }
+
+
 }

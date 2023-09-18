@@ -28,7 +28,7 @@ const Specs = () => {
                 <div className={styles.row}>
                     <span className={styles.topic}>Splash, Water & Dust Resistance</span>
                     <div className={styles.desc}>
-                        Rated IP67 (maximum depth of 1 metre <br /> up to 30 minutes)
+                        Rated IP67 (maximum depth of 1 metre up to 30 minutes)
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@ const Specs = () => {
                 <div className={styles.row}>
                     <span className={styles.topic}>Certifications</span>
                     <div className={styles.desc}>
-                        CE
+                        CE | FCC
                     </div>
                 </div>
             </div>

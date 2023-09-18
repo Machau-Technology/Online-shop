@@ -6,12 +6,6 @@
     margin: 100px 0;
 }
 
-.left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .right{
     display: flex;
     flex-direction: column;
@@ -25,4 +19,49 @@
     justify-content: space-between;
     align-items: center;
     gap: 31px;
+}
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        flex-direction: column;
+        margin: 25px 0px 100px 0px;
+    }
+
+    .left{
+        width: 310px;
+        height: 328px;
+    }
+
+    .right{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bt{
+        width: 310px;
+        height: 155px;
+    }
+
+    .bottom{
+        gap: 15px;
+        flex-direction: row-reverse;
+    }
+
+    .battery{
+        width: 149px;
+        height: 154px;
+    }
+
+    .wp{
+        width: 146px;
+        height: 154px;
+    }
+
+
+
+
+
+
+
 }

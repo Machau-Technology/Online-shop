@@ -1,6 +1,6 @@
 .container{
     height: 120px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,7 @@
 
 .gif{
     border-radius: 50%;
+    border: 2px solid #000;
 }
 
 .desc{
@@ -35,4 +36,35 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        height: 228px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .item{
+        gap: 23px;
+    }
+
+    .item:nth-child(2){
+        flex-direction: row-reverse;
+    }
+
+    .gif{
+        width: 50px;
+        height: 50px;
+    }
+
+    .upper{
+        font-size: 14px;
+    }
+
+    .lower{
+        font-size: 10px;
+    }
 }

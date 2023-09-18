@@ -10,7 +10,7 @@ const About = () => {
                 <span className={styles.heading}>How we solve?</span>
                 <span className={styles.headDesc}>MasterTag helps you to keep track of your assets! </span>
                 <div className={styles.links}>
-                    <span className={styles.link1}>Main Features</span>
+                    <Link href="" className={styles.link1}><span className={styles.feat}>Main Features</span></Link>
                     <Link href="" className={styles.link2}>
                         <button className={styles.yt}>Watch Video {">"}</button>
                     </Link>

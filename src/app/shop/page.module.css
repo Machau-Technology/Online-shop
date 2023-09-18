@@ -1,5 +1,5 @@
 .container{
-
+    width: 100vw;
 }
 
 .slider{
@@ -32,7 +32,8 @@
 }
 
 .pCarousel{
-    width: 1250px;
+    /* width: 1250px; */
+    width: 83%;
     height: 400px;
     margin-left: 100px;
     position: absolute;
@@ -114,4 +115,70 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .slider{
+        gap: 65px;
+        height: 260px;
+    }
+
+    .slideProduct{
+        margin-top: 130px;
+    }
+
+    .head{
+        font-size: 40px;
+    }
+
+    .info{
+        font-size: 10px;
+    }
+
+    .amount{
+        display: none;
+    }
+
+    .btn1{
+        width: 66px;
+        height: 20px;
+        padding: 10px;
+    }
+
+    .calc{
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .shopLink{
+        width: 80px;
+        height: 20px;
+    }
+
+    .btn2{
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .liner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 20px 0 20px;
+        gap: 60px;
+    }
+
+    .left{
+        gap: 18px;
+    }
+
+    .right{
+        gap: 10px;
+    }
+
+
 }

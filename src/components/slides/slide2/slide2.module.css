@@ -17,6 +17,7 @@
 }
 
 .line{
+    display: block;
     width: 0;
     height: 178px;
     border-left: 1px solid #2C2C2C;
@@ -43,6 +44,10 @@
 
 .shopLink{
     width: 220px;
+}
+
+.shopLink2{
+    display: none;
 }
 
 .btn{

@@ -62,7 +62,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={styles.linkSection}>
-                        <div className={styles.col}>
+                        <div className={`${styles.col} ${styles.hide}`}>
                             <span className={styles.topic}>Use Cases</span>
                             <div className={styles.pgLinks}>
                                 <span className={styles.pgLink}>Key Bunch</span>
@@ -79,7 +79,7 @@ const Footer = () => {
                                 <span className={styles.pgLink}>Other Essentials</span>
                             </div>
                         </div>
-                        <div className={styles.col}>
+                        <div className={`${styles.col} ${styles.hide}`}>
                             <span className={styles.topic}>Explore</span>
                             <div className={styles.pgLinks}>
                                 <span className={styles.pgLink}>How It Works</span>
@@ -89,15 +89,27 @@ const Footer = () => {
                                 <span className={styles.pgLink}>Hiring & Careers</span>
                             </div>
                         </div>
-                        <div className={styles.col}>
-                            <span className={styles.topic}>Resources</span>
-                            <div className={styles.pgLinks}>
-                                <span className={styles.pgLink}>Order Status</span>
-                                <span className={styles.pgLink}>Blogs & News</span>
-                                <span className={styles.pgLink}>Help & Contact</span>
-                                <span className={styles.pgLink}>Whats' New</span>
-                                <span className={styles.pgLink}>Download</span>
-                                <span className={styles.pgLink}>Our Story</span>
+                        <div className={styles.colRes}>
+                            <div className={styles.col}>
+                                <span className={styles.topic}>Resources</span>
+                                <div className={styles.pgLinks}>
+                                    <span className={styles.pgLink}>Order Status</span>
+                                    <span className={styles.pgLink}>Blogs & News</span>
+                                    <span className={styles.pgLink}>Help & Contact</span>
+                                    <span className={styles.pgLink}>Whats' New</span>
+                                    <span className={styles.pgLink}>Download</span>
+                                    <span className={styles.pgLink}>Our Story</span>
+                                </div>
+                            </div>
+                            <div className={styles.col}>
+                                <span className={styles.topic}>Explore</span>
+                                <div className={styles.pgLinks}>
+                                    <span className={styles.pgLink}>How It Works</span>
+                                    <span className={styles.pgLink}>Master Community</span>
+                                    <span className={styles.pgLink}>About MasterFam</span>
+                                    <span className={styles.pgLink}>FAQs & Discussion</span>
+                                    <span className={styles.pgLink}>Hiring & Careers</span>
+                                </div>
                             </div>
                         </div>
                         <div className={styles.colLast}>

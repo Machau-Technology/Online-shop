@@ -46,6 +46,7 @@ const About = () => {
                             width={396}
                             height={263}
                             alt='Girl holding keys'
+                            className={styles.girl}
                         />
                         <div className={styles.info}>
                             <span className={styles.infoHead}>Our Mission</span>
@@ -72,6 +73,7 @@ const About = () => {
                             width={332}
                             height={329}
                             alt='Table with accessories'
+                            className={styles.cup}
                         />
                     </div>
                 </div>

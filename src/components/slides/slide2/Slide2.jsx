@@ -14,7 +14,7 @@ const Slide2 = () => {
                     <h2 className={styles.save}>Save flat 60% + get <br /> free accessories</h2>
                     <Link href="/shop/master-sticker" className={styles.shopLink}>
                         <button className={styles.btn}>Shop now</button>
-                        </Link>
+                    </Link>
                 </div>
                 <div className={styles.line}></div>
             </div>
@@ -34,7 +34,7 @@ const Slide2 = () => {
 
             <Link href="/shop/master-sticker" className={styles.shopLink2}>
                 <button className={styles.btn}>Shop now</button>
-                </Link>
+            </Link>
         </div>
     )
 }

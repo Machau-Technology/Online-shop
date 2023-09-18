@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 55px;
+    width: 100vw;
 }
 
 .header{
@@ -78,4 +79,71 @@
     font-style: normal;
     font-weight: 600;
     letter-spacing: -0.18px;
+}
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        gap: 30px;
+    }
+    
+    .header{
+        gap: 0px;
+    }
+    
+    .heading{
+        font-size: 24px;
+        letter-spacing: normal;
+    }
+    
+    .headingDesc{
+        font-size: 14px;
+        letter-spacing: normal;
+    }
+    
+    .main{
+        gap: 31px;
+    }
+    
+    .row{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        border-bottom: none;
+    }
+    
+    .topic{
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: normal;
+        text-align: center;
+    }
+
+    .row:first-child > .topic{
+        display: none;
+    }
+
+    .row:nth-child(2) > .topic{
+        font-size: 16px;
+    }
+    
+    .desc{
+        gap: 36px;
+        text-align: center;
+        letter-spacing: normal;
+    }
+    
+    .sub{
+        font-size: 16px;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .subDesc{
+        text-wrap: nowrap;
+    }
+
 }

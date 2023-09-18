@@ -15,10 +15,10 @@ const Carousel = ({ items }) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
-        
+
         appendDots: dots => (
             <div style={{ position: 'absolute', bottom: '45px', left: '50%', transform: 'translateX(-50%)' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>

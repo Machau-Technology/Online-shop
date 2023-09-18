@@ -1,9 +1,10 @@
 .container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 70px;
     margin: 100px 0px 300px 0px;
 }
 
@@ -35,7 +36,7 @@
     align-items: center;
 }
 
-.link1{
+.feat{
     color: #FE0000;
     font-style: normal;
     font-weight: 400;
@@ -103,6 +104,95 @@
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        margin: 60px 0px 100px 0px;
+    }
+    
+    .heading{
+        font-size: 30px;
+    }
+    
+    .headDesc{
+        font-size: 14px;
+        width: 200px;
+        text-align: center;
+    }
+    
+    .links{
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 18px;
+        justify-content: center;
+    }
+    
+    .link1{
+        text-decoration: underline;
+        text-decoration-color: #FE0000;
+    }
+    
+    .feat{
+        font-size: 12px;
+    }
+    
+    .yt{
+        width: 122px;
+        height: 25px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+    
+    .main{
+        gap: 60px;
+    }
+    
+    .row{
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .row:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .contents{
+        width: 313px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    
+    .row:nth-child(2n) > .contents{
+        text-align: center;
+    }
+    
+    .topic{
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .desc{
+        color: #5C6272;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+
+
+
+
 }
 
 

@@ -6,26 +6,13 @@ import Link from 'next/link'
 const Rechargeable = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
-                <div className={styles.biggerCircle}>
-                    <Image
-                        src="/assets/Device4.png"
-                        alt='Device4'
-                        width={163}
-                        height={165}
-                        className={styles.device}
-                    />
-                </div>
-                <div className={styles.circle}>
-                    <Image
-                        src="/assets/Usb.png"
-                        alt='Usb'
-                        width={225}
-                        height={219}
-                        className={styles.usb}
-                    />
-                </div>
-            </div>
+            <Image
+                src="/assets/Finding.svg"
+                width={498}
+                height={398}
+                className={styles.image}
+                alt='Finding'
+            />
             <div className={styles.right}>
                 <span className={styles.top}>Rechargeable</span>
                 <div className={styles.bottom}>

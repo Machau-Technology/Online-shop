@@ -2,49 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 90px;
     background-color: #10958B;
-    width: 100%;
+    width: 100vw;
     height: 860px;
 }
 
-.left{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+.image{
 
-.biggerCircle{
-    width: 343px;
-    height: 333px;
-    border-radius: 343px;
-    background: linear-gradient(209deg, #1EBFB3 0%, #10958B 100%);
-    background-blend-mode: darken;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.circle{
-    width: 225px;
-    height: 219px;
-    border-radius: 225px;
-    background: linear-gradient(209deg, #1EBFB3 0%, #10958B 100%);
-    background-blend-mode: darken;
-    box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 515px;
-    top: -60px;
 }
 
 .right{
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -112,5 +80,67 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        height: 590px;
+        flex-wrap: wrap;
+        gap: 43px;
+        padding: 30px 0;
+    }
+
+    .image{
+        width: 303px;
+        height: 242px;
+    }
+
+    .right{
+        gap: 10px;
+        align-items: center;
+    }
+
+    .top{
+        font-size: 15px;
+    }
+
+    .bottom{
+        gap: 17px;
+        align-items: center;
+    }
+
+    .heading{
+        font-size: 24px;
+    }
+
+    .para{
+        width: 88%;
+        text-align: center;
+    }
+
+    .bold{
+        font-size: 16px;
+    }
+
+    .normal{
+        font-size: 16px;
+        width: 95%;
+        line-height: 20px;
+        margin-top: -3px;
+    }
+
+    .shopLink{
+        margin-top: 5px;
+    }
+
+    .shop{
+        width: 120px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
 }
 

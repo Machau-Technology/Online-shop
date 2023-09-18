@@ -14,3 +14,22 @@
     top: 230px;
     right: -60px;
 }
+
+@media screen and (max-width: 464px) {
+
+    .slick-next, .slick-prev{
+        width: 23px;
+        height: 23px;
+    }
+
+    .slick-prev{
+        top: 100px;
+        left: -110px;
+    }
+
+    .slick-next{
+        top: 100px;
+        right: 80px;
+    }
+
+}

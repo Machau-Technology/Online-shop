@@ -1,5 +1,5 @@
 .container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,6 @@ color: #FFF;
 font-size: 80px;
 font-style: normal;
 font-weight: 400;
-line-height: 88px;
 }
 
 .finding{
@@ -144,15 +143,139 @@ line-height: 88px;
     font-weight: 400;
 }
 
+.colRes{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.colRes > .col:last-child{
+    display: none;
+}
+
 .colLast{
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
+
 .foot{
     color: #FFF;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        height: 1000px;
+        justify-content: flex-start;
+    }
+
+    .up{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left{
+        gap: 0;
+    }
+
+    .first{
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .start{
+        font-size: 40px;
+        letter-spacing: 3.2px;
+    }
+
+    .finding{
+        font-size: 40px;
+        letter-spacing: 3.2px;
+    }
+
+    .second{
+        font-size: 36px;
+        letter-spacing: 3.2px;
+    }
+
+    .shop{
+        width: 198px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .down{
+        gap: 42px;
+    }
+
+    .links{
+        flex-direction: column;
+        gap: 42px;
+        padding: 0px 5px 0px 5px;
+    }
+
+    .master{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .heading{
+        font-size: 20px;
+    }
+
+    .socialLinks{
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .socialLink{}
+
+    .socialName{
+        display: none;
+    }
+
+    .linkSection{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .hide{
+        display: none;
+    }
+    
+    .topic{
+        font-weight: 500;
+    }
+    
+    .pgLink{
+        letter-spacing: 0.28px;
+        text-wrap: nowrap;
+    }
+    
+    .colRes{
+        gap: 28px;
+    }
+    
+    .colRes > .col:last-child{
+        display: flex;
+    }
+    
+    .colLast{
+        gap: 28px;
+    }
+
+    .foot{
+        font-size: 10px;
+        letter-spacing: 0.28px;
+    }
+
+
+
 }

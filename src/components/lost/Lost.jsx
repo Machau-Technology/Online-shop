@@ -26,17 +26,15 @@ const Lost = () => {
                 </Link>
             </div>
 
-            <div className={styles.right}>
-                <Image
-                    src="/assets/Device3.png"
-                    width={346}
-                    height={341}
-                    alt="MasterSticker"
-                    priority
-                    quality={100}
-                    className={styles.image}
-                />
-            </div>
+            <Image
+                src="/assets/LostAndFound.svg"
+                width={346}
+                height={341}
+                alt="MasterSticker"
+                priority
+                quality={100}
+                className={styles.image}
+            />
         </div>
     )
 }

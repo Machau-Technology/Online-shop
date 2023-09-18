@@ -4,7 +4,7 @@
     gap: 200px;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: 1089px;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
 }
@@ -34,7 +34,7 @@
 .card{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     width: 364px;
     height: 286px;
     padding-top: 34px;
@@ -70,6 +70,7 @@
 .personPic{
     background-color: #FFF;
     border-radius: 50%;
+    border: 1px solid lightgray;
 }
 
 .personInfo{
@@ -100,6 +101,10 @@
     font-size: 12px;
 }
 
+.sliderReviews{
+    display: none;
+}
+
 .linkSection{
     display: flex;
     flex-direction: column;
@@ -109,6 +114,7 @@
 }
 
 .appInfo{
+    width: 450px;
     color: #5C6272;
     font-size: 16px;
     font-style: normal;
@@ -131,5 +137,99 @@
     outline: none;
     cursor: pointer;
     width: 100%;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        gap: 85px;
+        height: 1089px;
+    }
+
+    .reviews{
+        gap: 28px;
+    }
+
+    .cards{
+        display: none;
+    }
+
+    .sliderReviews{
+        display: block;
+        width: 100vw;
+        height: 270px;
+    }
+
+    .slide{
+        padding-left: 40px;
+        height: 260px
+    }
+
+    .card{
+        gap: 17px;
+        width: 316px;
+        height: 248px;
+        padding-top: 29px;
+        padding-bottom: 23px;
+        border-radius: 12px;
+        background-color: #FFF;
+        box-shadow: 0px 54px 80px -16px rgba(219, 222, 229, 0.80);
+    }
+    
+    .review{
+        width: 275px;
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    
+    .person{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-left: 20px;
+        gap: 18px;
+    }
+    
+    .personPic{
+        background-color: #FFF;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+    
+    .personInfo{
+        gap: 2px;
+    }
+    
+    .star{
+        font-size: 11px;
+    }
+
+    .linkSection{
+        gap: 12px;
+    }
+    
+    .appInfo{
+        width: 310px;
+        font-size: 14px;
+        line-height: 22px; 
+        letter-spacing: normal;
+    }
+    
+    .btns{
+        gap: 20px;
+    }
+    
+    .btn{
+        width: 100%;
+    }
+
+    .phone{
+        width: 100px;
+        height: 30px;
+    }
+
+
 }
 

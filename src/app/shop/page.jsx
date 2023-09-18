@@ -18,28 +18,28 @@ const Shop = () => {
             image: "/assets/Device1.png",
             width: 470,
             height: 470,
-            class: "normal"
+            class: "tag1"
         },
         {
             id: "2",
             image: "/assets/Device2.png",
             width: 470,
             height: 470,
-            class: "normal"
+            class: "tag2"
         },
         {
             id: "3",
             image: "/assets/DeviceSide.png",
             width: 120,
             height: 470,
-            class: "sideView"
+            class: "tag3"
         },
         {
             id: "4",
             image: "/assets/DeviceTilted.png",
             width: 470,
             height: 470,
-            class: "normal"
+            class: "tag4"
         }
     ];
 

@@ -14,24 +14,93 @@
     align-items: center;
 } */
 
-.sideView{
+.tag3{
     margin-left: 160px;
 }
 
-.sticker1{
+.sticker1, .sticker4, .sticker7{
     margin-left: -100px;
 }
 
-.sticker2{
+.sticker2, .sticker5, .sticker8{
     margin-left: -110px;
-    margin-top: 70px;
 }
 
 .sticker3{
-    margin-left: -110px;
+    margin-left: -170px;
+    margin-top: -20px;
 }
 
-.sticker4{
-    margin-left: -110px;
-    margin-top: -40px;
+.sticker6{
+    margin-left: -60px;
+    margin-top: -20px;
+}
+
+.sticker9{
+    margin-left: -60px;
+    margin-top: -30px;
+}
+
+
+
+@media screen and (max-width: 464px) {
+
+    .imageSection{
+        padding: 40px 10px;
+    }
+
+    .tag1{
+        width: 140px;
+        height: 140px;
+    }
+
+    .tag2{
+        width: 140px;
+        height: 140px;
+    }
+
+    .tag3{
+        width: 40px;
+        height: 140px;
+        margin-left: 50px;
+    }
+
+    .tag4{
+        width: 140px;
+        height: 140px;
+    }
+
+    .sticker1, .sticker4, .sticker7{
+        width: 157px;
+        height: 122px;
+        margin-left: -10px;
+        margin-top: 10px;
+    }
+
+    .sticker2, .sticker5, .sticker8{
+        width: 105px;
+        height: 120px;
+        margin-left: 10px;
+    }
+
+    .sticker3{
+        width: 159px;
+        height: 117px;
+        margin-left: -10px;
+        margin-top: 20px;
+    }
+
+    .sticker6{
+        width: 130px;
+        height: 132px;
+        margin-left: -10px;
+        margin-top: 5px;
+    }
+
+    .sticker9{
+        width: 140px;
+        height: 141px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
 }

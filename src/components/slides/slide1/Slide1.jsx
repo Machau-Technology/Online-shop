@@ -33,7 +33,7 @@ const Slide1 = () => {
             </div>
 
             <Link href="/shop" className={styles.shopLink2}>
-                        <button className={styles.btn}>Shop now</button>
+                <button className={styles.btn}>Shop now</button>
             </Link>
 
         </div>

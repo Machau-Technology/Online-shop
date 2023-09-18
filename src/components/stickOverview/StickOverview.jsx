@@ -11,6 +11,7 @@ const StickOverview = () => {
                     width={569}
                     height={604}
                     alt="overview"
+                    className={styles.image1}
                 />
             </div>
             <div className={styles.right}>
@@ -20,12 +21,14 @@ const StickOverview = () => {
                         width={270}
                         height={284}
                         alt='overview'
+                        className={styles.image2}
                     />
                     <Image
                         src="/assets/StickOverview2.svg"
                         width={270}
                         height={284}
                         alt='overview'
+                        className={styles.image2}
                     />
                 </div>
                 <div className={styles.row}>
@@ -34,12 +37,14 @@ const StickOverview = () => {
                         width={270}
                         height={284}
                         alt='overview'
+                        className={styles.image2}
                     />
                     <Image
                         src="/assets/StickOverview4.svg"
-                        width={269}
+                        width={270}
                         height={284}
                         alt="overview"
+                        className={styles.image2}
                     />
                 </div>
             </div>

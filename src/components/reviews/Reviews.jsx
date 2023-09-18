@@ -1,7 +1,14 @@
+"use client"
 import React from 'react'
 import styles from "./reviews.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+const Slider = dynamic(() => import('react-slick'), {
+    ssr: false,
+});
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Reviews = () => {
 
@@ -29,6 +36,17 @@ const Reviews = () => {
         }
     ]
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.reviews}>
@@ -55,11 +73,39 @@ const Reviews = () => {
                         </div>
                     ))}
                 </div>
+
+                <div className={styles.sliderReviews}>
+                    <Slider {...settings}>
+                        {data.map((item, index) => (
+                            <div className={styles.slide}>
+                                <div className={styles.card} key={index}>
+                                    <p className={styles.review}>
+                                        {item.review}
+                                    </p>
+                                    <div className={styles.person}>
+                                        <Image src={item.pic}
+                                            alt='Person'
+                                            width={73}
+                                            height={73}
+                                            className={styles.personPic}
+                                        />
+                                        <div className={styles.personInfo}>
+                                            <span className={styles.name}>{item.name}</span>
+                                            <span className={styles.position}>{item.position}</span>
+                                            <span className={styles.star}>{item.star}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
+
             <div className={styles.linkSection}>
                 <span className={styles.head1}>MasterTag App</span>
                 <p className={styles.appInfo}>
-                    Our user-friendly app will be available on Google Play <br />
+                    Our user-friendly app will be available on Google Play
                     and the Apple App Store.
                 </p>
                 <div className={styles.btns}>
@@ -70,6 +116,7 @@ const Reviews = () => {
                                 alt="Android"
                                 width={121}
                                 height={37}
+                                className={styles.phone}
                             />
                         </button>
                     </Link>

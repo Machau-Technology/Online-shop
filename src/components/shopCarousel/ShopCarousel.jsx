@@ -17,7 +17,7 @@ const ShopCarousel = ({ data }) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
 
@@ -27,7 +27,7 @@ const ShopCarousel = ({ data }) => {
                 alt="Previous"
                 width={72}
                 height={72}
-                // className={styles.arrow}
+                // className="arrow"
                 priority
             />
         ),
@@ -38,7 +38,7 @@ const ShopCarousel = ({ data }) => {
                 alt="Next"
                 width={72}
                 height={72}
-                // className={styles.arrow}
+                // className="arrow"
                 priority
             />
         )
