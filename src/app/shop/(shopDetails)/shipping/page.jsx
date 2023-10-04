@@ -108,9 +108,9 @@ const Shipping = () => {
 
 
                         const response = await axiosInstance.post("/", data);
-                        console.log(response.data);
+                        console.log(response);
 
-                        router.push(response.data)
+                        router.push(response.data);
 
                     } catch (error) {
                         console.error('Error making POST request:', error);

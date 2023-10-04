@@ -3,13 +3,11 @@ import React, { useState } from 'react'
 import styles from "./page.module.css"
 import ShopCarousel from '@/components/shopCarousel/ShopCarousel'
 import Benefits from '@/components/benefits/Benefits'
-import Reviews from '@/components/reviews/Reviews'
 import Link from 'next/link'
-import StickOverview from '@/components/stickOverview/StickOverview'
 import { useFormData } from '@/context/shoppingContext/ShoppingContext'
 import Image from 'next/image'
 
-const MasterStickerShop = () => {
+const MasterSticker150 = () => {
 
     const shopData = [
         {
@@ -36,10 +34,12 @@ const MasterStickerShop = () => {
     ];
 
     const { formData, setFormData } = useFormData();
-    const [stickerCount, setStickerCount] = useState(formData.stickerCount);
+    const [stickerCount150, setStickerCount150] = useState(formData.stickerCount150);
     const [tagShop, setTagShop] = useState(formData.tagShop);
-    const [stickerShop, setStickerShop] = useState(formData.stickerShop);
-    const [stickerPrice, setStickerPrice] = useState(formData.stickerPrice);
+    const [stickerShop150, setStickerShop150] = useState(formData.stickerShop150);
+    const [stickerShop75, setStickerShop75] = useState(formData.stickerShop75);
+    const [stickerShop100, setStickerShop100] = useState(formData.stickerShop100);
+    const [stickerPrice150, setStickerPrice150] = useState(formData.stickerPrice150);
 
     const updateStickerCount = (count) => {
 
@@ -47,17 +47,36 @@ const MasterStickerShop = () => {
             return;
         }
 
-        setStickerCount(count);
-        setStickerPrice(count * 99);
-        setFormData({ ...formData, stickerCount: count, stickerPrice: count * 99 });
+        setStickerCount150(count);
+        setStickerPrice150(count * 99);
+        setFormData({ ...formData, stickerCount150: count, stickerPrice150: count * 99 });
+    };
+
+    const addToCart = () => {
+
+        // if (cart.indexOf("sticker75") != -1) {
+        //     const updatedCart = [...cart, "sticker75"];
+        //     setCart(updatedCart);
+        // }
+
+        setStickerShop150(true);
+        setFormData({ ...formData, stickerShop150: true });
+
     };
 
     const updateCategory = () => {
 
-        setStickerShop(true);
+        setStickerShop150(true);
         setTagShop(false);
-        setStickerPrice(stickerCount * 99);
-        setFormData({ ...formData, stickerShop: true, tagShop: false, stickerPrice: stickerCount * 99 });
+        setStickerPrice150(stickerCount150 * 99);
+        setFormData({
+            ...formData,
+            stickerShop150: true,
+            stickerShop75: false,
+            stickerShop100: false,
+            tagShop: false,
+            stickerPrice150: stickerCount150 * 99
+        });
     }
 
     return (
@@ -75,20 +94,30 @@ const MasterStickerShop = () => {
                         <span className={styles.info}>Tech specs</span>
                     </div>
                     <div className={styles.right}>
-                        <span className={styles.amount}>₹{stickerPrice}</span>
+                        <span className={styles.amount}>₹{stickerPrice150}</span>
                         <button className={styles.btn1}>
                             <span
                                 className={styles.calc}
-                                onClick={() => updateStickerCount(stickerCount - 1)}
+                                onClick={() => updateStickerCount(stickerCount150 - 1)}
                             ><b>--</b></span>
-                            <span className={styles.calc}>{stickerCount}</span>
+                            <span className={styles.calc}>{stickerCount150}</span>
                             <span
                                 className={styles.calc}
-                                onClick={() => updateStickerCount(stickerCount + 1)}
+                                onClick={() => updateStickerCount(stickerCount150 + 1)}
                             >
                                 <b>+</b>
                             </span>
                         </button>
+                        <Link
+                            href="/shop/cart"
+                            className={styles.shopLink}
+                        >
+                            <button
+                                className={styles.btn2}
+                                onClick={addToCart}
+                            >Add to cart
+                            </button>
+                        </Link>
                         <Link
                             href="/shop/shipping"
                             className={styles.shopLink}
@@ -96,7 +125,7 @@ const MasterStickerShop = () => {
                             <button
                                 className={styles.btn2}
                                 onClick={updateCategory}
-                            >Shop now
+                            >Buy now
                             </button>
                         </Link>
                     </div>
@@ -105,6 +134,22 @@ const MasterStickerShop = () => {
 
             <Benefits />
             <div className={styles.others}>
+                <div className={styles.col}>
+                    <Image
+                        src="/assets/Circle100.svg"
+                        alt='Product'
+                        width={246}
+                        height={246}
+                        className={styles.circle}
+                    />
+                    <span className={styles.name}>MasterSticker 75</span>
+                    <Link
+                        href=""
+                        className={styles.circLink}
+                    >
+                        <button className={styles.circShop}>Shop now</button>
+                    </Link>
+                </div>
                 <div className={styles.col}>
                     <Image
                         src="/assets/Circle100.svg"
@@ -123,23 +168,7 @@ const MasterStickerShop = () => {
                 </div>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/Circle100.svg"
-                        alt='Product'
-                        width={246}
-                        height={246}
-                        className={styles.circle}
-                    />
-                    <span className={styles.name}>MasterSticker 150</span>
-                    <Link
-                        href=""
-                        className={styles.circLink}
-                    >
-                        <button className={styles.circShop}>Shop now</button>
-                    </Link>
-                </div>
-                <div className={styles.col}>
-                    <Image
-                        src="/assets/Circle150.svg"
+                        src="/assets/CircleTag.svg"
                         alt='Product'
                         width={246}
                         height={246}
@@ -158,4 +187,4 @@ const MasterStickerShop = () => {
     )
 }
 
-export default MasterStickerShop
+export default MasterSticker150

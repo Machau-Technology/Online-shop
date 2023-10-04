@@ -60,6 +60,18 @@ const Shop = () => {
         setFormData({ ...formData, tagCount: count, tagPrice: count * 999 });
     };
 
+    const addToCart = () => {
+
+        // if (cart.indexOf("sticker75") != -1) {
+        //     const updatedCart = [...cart, "sticker75"];
+        //     setCart(updatedCart);
+        // }
+
+        setTagShop(true);
+        setFormData({ ...formData, tagShop: true });
+
+    };
+
     const updateCategory = () => {
         setStickerShop(false);
         setTagShop(true);
@@ -96,6 +108,16 @@ const Shop = () => {
                                 <b>+</b>
                             </span>
                         </button>
+                        <Link
+                            href="/shop/cart"
+                            className={styles.shopLink}
+                        >
+                            <button
+                                className={styles.btn2}
+                                onClick={addToCart}
+                            >Add to cart
+                            </button>
+                        </Link>
                         <Link
                             href="/shop/shipping"
                             className={styles.shopLink}

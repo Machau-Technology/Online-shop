@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useFormData } from '@/context/shoppingContext/ShoppingContext'
 import Image from 'next/image'
 
-const MasterStickerShop = () => {
+const MasterSticker75 = () => {
 
     const shopData = [
         {
@@ -34,10 +34,13 @@ const MasterStickerShop = () => {
     ];
 
     const { formData, setFormData } = useFormData();
-    const [stickerCount, setStickerCount] = useState(formData.stickerCount);
+    const [stickerCount75, setStickerCount75] = useState(formData.stickerCount75);
     const [tagShop, setTagShop] = useState(formData.tagShop);
-    const [stickerShop, setStickerShop] = useState(formData.stickerShop);
-    const [stickerPrice, setStickerPrice] = useState(formData.stickerPrice);
+    const [stickerShop75, setStickerShop75] = useState(formData.stickerShop75);
+    const [stickerShop100, setStickerShop100] = useState(formData.stickerShop100);
+    const [stickerShop150, setStickerShop150] = useState(formData.stickerShop150);
+    const [stickerPrice75, setStickerPrice75] = useState(formData.stickerPrice75);
+    // const [cart, setCart] = useState(formData.cart);
 
     const updateStickerCount = (count) => {
 
@@ -45,17 +48,39 @@ const MasterStickerShop = () => {
             return;
         }
 
-        setStickerCount(count);
-        setStickerPrice(count * 99);
-        setFormData({ ...formData, stickerCount: count, stickerPrice: count * 99 });
+        setStickerCount75(count);
+        setStickerPrice75(count * 99);
+        setFormData({ ...formData, stickerCount75: count, stickerPrice75: count * 99 });
+    };
+
+    const addToCart = () => {
+
+        // if (cart.indexOf("sticker75") != -1) {
+        //     const updatedCart = [...cart, "sticker75"];
+        //     setCart(updatedCart);
+        // }
+
+        setStickerShop75(true);
+        setFormData({ ...formData, stickerShop75: true });
+
     };
 
     const updateCategory = () => {
 
-        setStickerShop(true);
+        setStickerShop75(true);
+        setStickerShop100(false);
+        setStickerShop150(false);
         setTagShop(false);
-        setStickerPrice(stickerCount * 99);
-        setFormData({ ...formData, stickerShop: true, tagShop: false, stickerPrice: stickerCount * 99 });
+        setStickerPrice75(stickerCount75 * 99);
+        setFormData({
+            ...formData,
+            stickerShop75: true,
+            stickerShop100: false,
+            stickerShop150: false,
+            tagShop: false,
+            stickerPrice75: stickerCount75 * 99
+        });
+        console.log(formData);
     }
 
     return (
@@ -73,20 +98,31 @@ const MasterStickerShop = () => {
                         <span className={styles.info}>Tech specs</span>
                     </div>
                     <div className={styles.right}>
-                        <span className={styles.amount}>₹{stickerPrice}</span>
+                        <span className={styles.amount}>₹{stickerPrice75}</span>
                         <button className={styles.btn1}>
                             <span
                                 className={styles.calc}
-                                onClick={() => updateStickerCount(stickerCount - 1)}
+                                onClick={() => updateStickerCount(stickerCount75 - 1)}
                             ><b>--</b></span>
-                            <span className={styles.calc}>{stickerCount}</span>
+                            <span className={styles.calc}>{stickerCount75}</span>
                             <span
                                 className={styles.calc}
-                                onClick={() => updateStickerCount(stickerCount + 1)}
+                                onClick={() => updateStickerCount(stickerCount75 + 1)}
                             >
                                 <b>+</b>
                             </span>
                         </button>
+                        <Link
+                            href="/shop/cart"
+                            className={styles.shopLink}
+                        >
+                            <button
+                                className={styles.btn2}
+                                onClick={addToCart}
+                            >
+                                Add to cart
+                            </button>
+                        </Link>
                         <Link
                             href="/shop/shipping"
                             className={styles.shopLink}
@@ -94,7 +130,8 @@ const MasterStickerShop = () => {
                             <button
                                 className={styles.btn2}
                                 onClick={updateCategory}
-                            >Shop now
+                            >
+                                Buy now
                             </button>
                         </Link>
                     </div>
@@ -121,7 +158,7 @@ const MasterStickerShop = () => {
                 </div>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/Circle100.svg"
+                        src="/assets/Circle150.svg"
                         alt='Product'
                         width={246}
                         height={246}
@@ -137,7 +174,7 @@ const MasterStickerShop = () => {
                 </div>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/Circle150.svg"
+                        src="/assets/CircleTag.svg"
                         alt='Product'
                         width={246}
                         height={246}
@@ -156,4 +193,4 @@ const MasterStickerShop = () => {
     )
 }
 
-export default MasterStickerShop
+export default MasterSticker75

@@ -35,12 +35,18 @@ export function FormDataProvider({ children }) {
 
         return {
             tagCount: 1,
-            stickerCount: 1,
+            stickerCount75: 1,
+            stickerCount100: 1,
+            stickerCount150: 1,
             tagShop: false,
-            stickerShop: false,
+            stickerShop75: false,
+            stickerShop100: false,
+            stickerShop150: false,
             tagPrice: 999,
-            stickerPrice: 99,
-
+            stickerPrice75: 99,
+            stickerPrice100: 99,
+            stickerPrice150: 99,
+            cart: []
         };
     };
 

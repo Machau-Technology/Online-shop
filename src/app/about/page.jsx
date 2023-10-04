@@ -58,6 +58,13 @@ const About = () => {
                     </div>
 
                     <div className={styles.row}>
+                        <Image
+                            src="/assets/Cup.png"
+                            width={332}
+                            height={329}
+                            alt='Table with accessories'
+                            className={styles.cup}
+                        />
                         <div className={styles.info}>
                             <span className={styles.infoHead}>Our Story</span>
                             <p className={styles.infoDesc}>
@@ -68,13 +75,6 @@ const About = () => {
                                 There is always a smart & easy way to find our stuff.
                             </p>
                         </div>
-                        <Image
-                            src="/assets/Cup.png"
-                            width={332}
-                            height={329}
-                            alt='Table with accessories'
-                            className={styles.cup}
-                        />
                     </div>
                 </div>
             </div>
