@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation'
 import styles from "./page.module.css"
 import React, { useEffect, useState } from 'react'
 import { axiosInstance } from '@/components/Const'
+import Image from 'next/image'
 
 const Status = () => {
 
@@ -19,8 +20,8 @@ const Status = () => {
     useEffect(() => {
 
         const getData = async () => {
-           let temp = await axiosInstance.post("/payment-info", { transactionId: transactionId });
-            temp = temp.data[0]
+            let temp = await axiosInstance.post("/payment-info", { transactionId: transactionId });
+            temp = temp.data[0];
             setData(temp);
         }
 
@@ -31,11 +32,15 @@ const Status = () => {
 
     return (
         <div className={styles.container}>
-            <h1>
-                {data.mobileNumber}
-            </h1>
+            <div className={styles.main}>
+                <Image
+                    src="/assets/Success.svg"
+                    width={146}
+                    height={146}
+                    className={styles.success}
+                />
 
-        
+            </div>
         </div>
     )
 }
