@@ -107,7 +107,7 @@ const Shipping = () => {
 
 
 
-                        const response = await axiosInstance.post("/", data);
+                        const response = await axiosInstance.post("/phonepe-integration", data);
                         console.log(response);
 
                         router.push(response.data);
@@ -139,20 +139,20 @@ const Shipping = () => {
                                 <label className={styles.genLabel} htmlFor="email">Phone Number</label>
 
                                 <div className={styles.number}>
-                                <div className={styles.code}>+91</div>
-                                <Field
-                                    type="text"
-                                    name="contactNumber"
-                                    className={`${styles.formInput} ${values.contactNumber ? styles['is-valid'] : ''}`}
-                                    required
+                                    <div className={styles.code}>+91</div>
+                                    <Field
+                                        type="text"
+                                        name="contactNumber"
+                                        className={`${styles.formInput} ${values.contactNumber ? styles['is-valid'] : ''}`}
+                                        required
 
-                                />
-                                <ErrorMessage
-                                    name="contactNumber"
-                                    component="div"
-                                    className={styles.warning}
-                                />
-                            </div>
+                                    />
+                                    <ErrorMessage
+                                        name="contactNumber"
+                                        component="div"
+                                        className={styles.warning}
+                                    />
+                                </div>
 
 
                                 {/* <Field type="Number" name="email" className={styles["formInput"]} required />
