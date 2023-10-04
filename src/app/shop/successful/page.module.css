@@ -1,0 +1,136 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    background: #F5B63A;
+    /* fill: linear-gradient(112deg, rgba(245, 182, 58, 0.90) 0%, rgba(245, 181, 58, 0.90) 96.54%); */
+    padding: 3% 0;
+}
+.success{
+    margin: 3% 0 2% 0;
+}
+
+.main{
+    width: 670px;
+    height: auto;
+    /* color: #FFF; */
+    border-radius: 25px;
+    background-color: white;
+}
+.detail{
+    display: flex;
+    padding: 1% 8% 4% 8%;
+}
+.det1{
+    width: 50%;
+}
+.detA{
+    color: #000;
+text-align: left;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 2% 0 0 0;
+}
+.detB{
+    margin: 2% 0 0 0;
+    font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.det2{
+    width: 50%;
+    text-align: right;
+}
+.head1{
+    text-align: center;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.head2{
+    text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.head3{
+    text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.hr{
+    margin: 8px 0 5px 0;
+}
+.head5{
+    text-align: center;
+    color: #369356;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+padding: 0% 0 3% 0;
+}
+.hep{
+    height: 38px;
+    width: 300px;
+    margin: 3% 0 5% 0;
+}
+
+@media screen and (max-width: 464px) {
+
+    .main {
+        width: 670px;
+        height: auto;
+        /* color: #FFF; */
+        border-radius: 25px;
+        background-color: white;
+        margin: 8% 4% 10% 4%;
+    }
+
+.success{
+    height: 90px;
+    width: 90px;
+}
+.head1{
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.head2{
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.detA{
+    color: #000;
+text-align: left;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 2% 0 0 0;
+}
+.detB{
+    margin: 2% 0 0 0;
+    font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+
+}
