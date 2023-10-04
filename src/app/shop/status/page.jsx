@@ -7,9 +7,11 @@ import axios from 'axios'
 
 const Status = async () => {
 
-    const data = await axios.post("http://localhost:3000/shop/status");
+    // const data = await axios.post("http://localhost:3000/shop/status");
 
-    console.log(data);
+    const query = useSearchParams() 
+
+    console.log(query);
 
     return (
         <div className={styles.container}>
