@@ -14,7 +14,7 @@ const Footer = () => {
                     </div>
                     <span className={styles.second}>with MasterTag</span>
                 </div>
-                <Link href="" className={styles.right} >
+                <Link href="/tagStick" className={styles.right} >
                     <button className={styles.shop}>Shop now</button>
                 </Link>
             </div>

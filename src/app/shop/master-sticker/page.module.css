@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 90px;
+    width: 100vw;
+    height: 772px;
+    background: linear-gradient(180deg, #F46219 0%, #F4B63A 100%);
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.btn{
+    width: 166px;
+    height: 37px;
+    border-radius: 10px;
+    background-color: #181818;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        height: auto;
+        padding: 8% 0;
+    }
+
+}

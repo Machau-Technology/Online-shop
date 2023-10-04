@@ -21,7 +21,7 @@ const Lost = () => {
                         </p>
                     </div>
                 </div>
-                <Link href="" className={styles.shopLink}>
+                <Link href="/shop/master-sticker" className={styles.shopLink}>
                     <button className={styles.shop}>Shop now</button>
                 </Link>
             </div>

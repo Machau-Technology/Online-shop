@@ -23,14 +23,14 @@ const Find = () => {
                             Lithium-ion battery with magnetic charger.
                         </p>
                     </div>
-                    <Link href="" className={styles.shopLink}>
+                    <Link href="/shop" className={styles.shopLink}>
                         <button className={styles.shop}>Shop now</button>
                     </Link>
                 </div>
             </div>
             <div className={styles.right}>
                 <Image
-                className={styles.phonewk}
+                    className={styles.phonewk}
                     src="/assets/PhoneWithKey.svg"
                     width={684}
                     height={684}

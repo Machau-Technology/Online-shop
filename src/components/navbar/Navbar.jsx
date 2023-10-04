@@ -17,8 +17,8 @@ const Navbar = () => {
                         height={58}
                     />
                 </Link>
-                 <div className={styles.links}>
-                   {/* <Link href="/" className={styles.link}>
+                <div className={styles.links}>
+                    {/* <Link href="/" className={styles.link}>
                         <span className={styles.linkName}>Products</span>
                         <Image
                             src="/assets/ArrowDown.png"
@@ -47,7 +47,7 @@ const Navbar = () => {
                     </Link> */}
                     <Link href="/shop" className={styles.link}>
                         <button className={styles.shopBtn}>Shop now</button>
-            
+
                         <img
                             className={styles.shopBtnMob}
                             src="/assets/micon.svg"
@@ -55,7 +55,7 @@ const Navbar = () => {
                             width={40}
                             height={40}
                         />
-                
+
                     </Link>
                 </div>
             </div>

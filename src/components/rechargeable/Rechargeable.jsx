@@ -24,7 +24,7 @@ const Rechargeable = () => {
                             powered by an inbuilt Lithium-ion battery with magnetic charger.
                         </p>
                     </div>
-                    <Link href="" className={styles.shopLink}>
+                    <Link href="/tagStick" className={styles.shopLink}>
                         <button className={styles.shop}>Shop now</button>
                     </Link>
                 </div>

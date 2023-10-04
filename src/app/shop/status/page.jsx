@@ -3,23 +3,18 @@
 import { useRouter, useSearchParams } from 'next/navigation'
 import styles from "./page.module.css"
 import React from 'react'
+import axios from 'axios'
 
-const Status = () => {
+const Status = async () => {
 
-    // const router = useRouter();
-    console.log(useSearchParams());
-    const data = useSearchParams();
+    const data = await axios.post("http://localhost:3000/shop/status");
+
     console.log(data);
-
-    let orderInfo;
-
-    if (data)
-        orderInfo = JSON.parse(data);
 
     return (
         <div className={styles.container}>
             <h1>
-                {orderInfo?.userId}
+                Status
             </h1>
         </div>
     )

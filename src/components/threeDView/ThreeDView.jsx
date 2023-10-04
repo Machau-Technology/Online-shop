@@ -22,7 +22,7 @@ const ThreeDView = () => {
                 height={320}
                 className={styles.view}
             />
-            <Link href="">
+            <Link href="/shop">
                 <button className={styles.shop}>Shop now</button>
             </Link>
         </div>
