@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation'
 import styles from "./page.module.css"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { axiosInstance } from '@/components/Const'
 
 const Status = () => {
@@ -14,22 +14,25 @@ const Status = () => {
     const transactionId = query.get("transactionId");
     console.log(transactionId);
 
-    let data = {};
+    const [data, setData] = useState({});
 
     useEffect(() => {
 
         const getData = async () => {
-            data = await axiosInstance.get("/payment-info", transactionId);
-            console.log(data);
+            setData(await axiosInstance.post("/payment-info", { transactionId: transactionId }));
+            // console.log(data.data[0].userId);
+            setData(data.data[0]);
         }
 
         getData();
     }, []);
 
+    // console.log(data);
+
     return (
         <div className={styles.container}>
             <h1>
-                {data.userId}
+                {data.mobileNumber}
             </h1>
         </div>
     )
