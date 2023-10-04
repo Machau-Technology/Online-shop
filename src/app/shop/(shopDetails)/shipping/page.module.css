@@ -226,5 +226,8 @@
 .check{
   top: 5px;
 }
+.number > .warning {
+  left: 0px;
+}
 
 }
