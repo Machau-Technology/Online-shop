@@ -123,7 +123,53 @@ const Shipping = () => {
 
                 {({ isSubmitting, handleChange, values, setFieldValue, touched, errors }) => (
                     <Form className={styles.form}>
-                        <div className={`${styles.row} ${styles.contact}`}>
+
+
+                        <div className={styles.row}>
+                            <div className={styles["postcode"]}>
+                                <label className={styles.genLabel} htmlFor="fullName">Full Name</label>
+                                <Field type="text" name="fullName" className={styles["formInput"]} required />
+                                <ErrorMessage
+                                    name="fullName"
+                                    component="div"
+                                    className={styles.warning}
+                                />
+                            </div>
+                            <div className={styles["email"]}>
+                                <label className={styles.genLabel} htmlFor="email">Phone Number</label>
+
+                                <div className={styles.number}>
+                                <div className={styles.code}>+91</div>
+                                <Field
+                                    type="text"
+                                    name="contactNumber"
+                                    className={`${styles.formInput} ${values.contactNumber ? styles['is-valid'] : ''}`}
+                                    required
+
+                                />
+                                <ErrorMessage
+                                    name="contactNumber"
+                                    component="div"
+                                    className={styles.warning}
+                                />
+                            </div>
+
+
+                                {/* <Field type="Number" name="email" className={styles["formInput"]} required />
+                                <ErrorMessage
+                                    name="email"
+                                    component="div"
+                                    className={styles.warning}
+                                /> */}
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        {/* <div className={`${styles.row} ${styles.contact}`}>
                             <label className={styles.contactLabel} htmlFor="contactNumber">Contact Number</label>
                             <div className={styles.number}>
                                 <div className={styles.code}>+91</div>
@@ -140,7 +186,7 @@ const Shipping = () => {
                                     className={styles.warning}
                                 />
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className={styles["address"]}>
                             <label className={styles.genLabel} htmlFor="addressLine1">First line of address</label>

@@ -9,6 +9,7 @@
 }
 
 .cart{
+    margin: 0% 0 0% 0%;
     width: 1360px;
     height: max-content;
     background-color: #FFF;
@@ -245,4 +246,94 @@
     font-weight: 500;
     text-align: center;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 464px){
+
+    .container{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(112deg, rgba(245, 182, 58, 0.90) 0%, rgba(245, 181, 58, 0.90) 96.54%);
+    
+    }
+    .cart {
+        margin: 10% 0 10% 0%;
+        width: 95%;
+        place-self: center;
+        height: max-content;
+        background-color: #FFF;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    .summarySection {
+        width: 90%;
+        height: max-content;
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+    .btn1 {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+        border: 1px solid #000;
+    }
+    .productDetails{
+        gap: 0px;
+    }
+.products{
+    gap: 22px;
+}
+.buy{
+    width: 165px;
+    height: 50px;
+    background-color: #181818;
+    color: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 0 0 2%;
+}
+.billing {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0px 0px 0px 0px;
+    margin-top: -12px;
+}
+.others {
+    width: 95%;
+    margin-top: 0px;
+}
+.summary{
+    padding: 0 0 0 22%;
+}
+.circleSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
 }

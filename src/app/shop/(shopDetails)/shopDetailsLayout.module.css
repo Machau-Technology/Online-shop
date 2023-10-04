@@ -12,6 +12,7 @@
     width: 671px;
     height: 706px;
     margin-top: 70px;
+    padding: 0rem 0 0 0;
     border-radius: 25px;
     background: #FFF;
     display: flex;
@@ -204,7 +205,53 @@
     .container{
         flex-direction: column;
         height: max-content;
+        gap: 0px;
+        /* padding: 0 0.rem 0 1rem; */
     }
+    .procedures{
+    width: 95%;
+    height: auto;
+    margin-top: 40px;
+    padding: 2rem 0 0 0;
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    place-self: center;
+    }
+
+    .summarySection{
+        width: 95%;
+        place-self: center;
+        margin-top: 50px;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        padding: 2rem 1rem 0 1rem;
+    }
+.products{
+    gap: 30px;
+}
+.btn1 {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 39px;
+    width: 113px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.productDetails {
+    gap: 0px;
+}
+.billing{
+    gap: 0px;
+}
 
 
 }
