@@ -3,7 +3,7 @@
 }
 
 .imageSection{
-    padding: 30px 450px;
+    padding: 30px 15% 30px 42%;
     height: 100%;
 }
 
@@ -41,7 +41,12 @@
     margin-top: -30px;
 }
 
-
+@media screen and (max-width: 1450px) {
+    .imageSection{
+        padding: 30px 15% 30px 32%;
+        height: 100%;
+    }
+}
 
 @media screen and (max-width: 464px) {
 

@@ -45,7 +45,7 @@ const Navbar = () => {
                             height={6}
                         />
                     </Link> */}
-                    <Link href="/shop" className={styles.link}>
+                    <Link href="/tagStick" className={styles.link}>
                         <button className={styles.shopBtn}>Shop now</button>
 
                         <img
