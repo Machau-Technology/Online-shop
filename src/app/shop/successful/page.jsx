@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { axiosInstance } from '@/components/Const'
 import Image from 'next/image'
 
-const Status = () => {
+const Successful = () => {
 
     // const data = await axios.post("http://localhost:3000/shop/status");
 
@@ -45,4 +45,4 @@ const Status = () => {
     )
 }
 
-export default Status
+export default Successful
