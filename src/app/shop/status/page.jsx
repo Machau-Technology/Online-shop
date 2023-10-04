@@ -19,13 +19,13 @@ const Status = () => {
     useEffect(() => {
 
         const getData = async () => {
-            setData(await axiosInstance.post("/payment-info", { transactionId: transactionId }));
-            // console.log(data.data[0].userId);
-            setData(data.data[0]);
+           let temp = await axiosInstance.post("/payment-info", { transactionId: transactionId });
+            temp = temp.data[0]
+            setData(temp);
         }
 
         getData();
-    }, []);
+    }, [transactionId]);
 
     // console.log(data);
 
@@ -34,6 +34,8 @@ const Status = () => {
             <h1>
                 {data.mobileNumber}
             </h1>
+
+        
         </div>
     )
 }
