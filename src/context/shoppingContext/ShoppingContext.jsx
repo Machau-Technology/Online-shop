@@ -25,31 +25,60 @@ export function FormDataProvider({ children }) {
     const initialStep = getInitialStep(path);
     // console.log(path);
 
+    // const loadInitialData = () => {
+
+    //     const storedData = sessionStorage.getItem('formData');
+
+    //     if (storedData) {
+    //         return JSON.parse(storedData);
+    //     }
+
+    //     return {
+    //         tagCount: 1,
+    //         stickerCount75: 1,
+    //         stickerCount100: 1,
+    //         stickerCount150: 1,
+    //         tagShop: false,
+    //         stickerShop75: false,
+    //         stickerShop100: false,
+    //         stickerShop150: false,
+    //         tagPrice: 999,
+    //         stickerPrice75: 99,
+    //         stickerPrice100: 99,
+    //         stickerPrice150: 99,
+    //         cart: []
+    //     };
+    // };
+
+
     const loadInitialData = () => {
-
-        const storedData = sessionStorage.getItem('formData');
-
-        if (storedData) {
+        if (typeof window !== 'undefined') {
+          // Check if we're on the client side
+          const storedData = sessionStorage.getItem('formData');
+          if (storedData) {
             return JSON.parse(storedData);
+          }
         }
-
+      
+        // If not on the client side or no data is found, return default values
         return {
-            tagCount: 1,
-            stickerCount75: 1,
-            stickerCount100: 1,
-            stickerCount150: 1,
-            tagShop: false,
-            stickerShop75: false,
-            stickerShop100: false,
-            stickerShop150: false,
-            tagPrice: 999,
-            stickerPrice75: 99,
-            stickerPrice100: 99,
-            stickerPrice150: 99,
-            cart: []
+          tagCount: 1,
+          stickerCount75: 1,
+          stickerCount100: 1,
+          stickerCount150: 1,
+          tagShop: false,
+          stickerShop75: false,
+          stickerShop100: false,
+          stickerShop150: false,
+          tagPrice: 999,
+          stickerPrice75: 99,
+          stickerPrice100: 99,
+          stickerPrice150: 99,
+          cart: [],
         };
-    };
+      };
 
+      
     const [activeStep, setActiveStep] = useState(initialStep);
     const [formData, setFormData] = useState(loadInitialData);
 
