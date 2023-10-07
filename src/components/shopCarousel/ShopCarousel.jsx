@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
-import dynamic from 'next/dynamic'
-const Slider = dynamic(() => import('react-slick'), {
-    ssr: false,
-});
+// import dynamic from 'next/dynamic'
+// const Slider = dynamic(() => import('react-slick'), {
+//     ssr: false,
+// });
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from "./shopCarousel.module.css"
@@ -14,11 +15,11 @@ const ShopCarousel = ({ data }) => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         pauseOnHover: false,
 
         prevArrow: (

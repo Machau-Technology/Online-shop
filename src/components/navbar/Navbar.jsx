@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className={styles.empty}></div>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <img
+                    <Image
                         className={styles.limg}
                         src="/assets/Logo.png"
                         alt='MasterTag'
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <Link href="/tagStick" className={styles.link}>
                         <button className={styles.shopBtn}>Shop now</button>
 
-                        <img
+                        <Image
                             className={styles.shopBtnMob}
                             src="/assets/micon.svg"
                             alt='icon'

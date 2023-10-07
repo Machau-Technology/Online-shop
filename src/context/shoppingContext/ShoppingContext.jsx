@@ -62,7 +62,7 @@ export function FormDataProvider({ children }) {
         return {
             tagCount: 1,
             stickerCount75: 1,
-            stickerCount100: 1,
+            stickerCount100: 1, q
             stickerCount150: 1,
             tagShop: false,
             stickerShop75: false,

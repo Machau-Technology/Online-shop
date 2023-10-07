@@ -1,25 +1,23 @@
 .slick-dots li.slick-active button::before {
-  color: black;
-  font-size: 9px;
+  color: black !important;
+  font-size: 9px !important;
 }
   
 .slick-dots li button::before {
-  color: white;
-  font-size: 9px;
-  opacity: 1;
+  color: white !important;
+  font-size: 9px !important;
+  opacity: 1 !important;
 }
 
 .slick-dots {
-
-  display: block;
-
+  display: block !important;
+  bottom: 40px !important;
 } 
 
    
 @media screen and (max-width: 464px){
   .slick-dots {
-
-    display: none;
-
-}
+    display: none !important;
+    z-index: -10 !important;
+  }
 }
