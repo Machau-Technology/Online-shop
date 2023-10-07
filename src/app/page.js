@@ -10,6 +10,7 @@ import Rechargeable from '@/components/rechargeable/Rechargeable';
 import Benefits from '@/components/benefits/Benefits';
 import Reviews from '@/components/reviews/Reviews';
 import Lost from '@/components/lost/Lost';
+import Script from 'next/script'
 
 export default function Home() {
 
@@ -21,6 +22,16 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-LY2MP7G5ZC" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-LY2MP7G5ZC');
+        `}
+      </Script>
       <div className={styles.carousel}>
         <Carousel items={items} />
       </div>
