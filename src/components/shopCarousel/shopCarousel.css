@@ -1,35 +1,35 @@
 .slick-next, .slick-prev{
-    width: 72px;
-    height: 72px;
+    width: 72px !important;
+    height: 72px !important;
 }
 
 .slick-prev{
-    position: absolute;
-    top: 230px;
-    left: -60px;
+    position: absolute !important;
+    top: 230px !important;
+    left: -60px !important;
 }
 
 .slick-next{
-    position: absolute;
-    top: 230px;
-    right: -60px;
+    position: absolute !important;
+    top: 230px !important;
+    right: -60px !important;
 }
 
 @media screen and (max-width: 464px) {
 
     .slick-next, .slick-prev{
-        width: 23px;
-        height: 23px;
+        width: 23px !important;
+        height: 23px !important;
     }
 
     .slick-prev{
-        top: 100px;
-        left: -110px;
+        top: 100px !important;
+        left: -110px !important;
     }
 
     .slick-next{
-        top: 100px;
-        right: 80px;
+        top: 100px !important;
+        right: 80px !important;
     }
 
 }

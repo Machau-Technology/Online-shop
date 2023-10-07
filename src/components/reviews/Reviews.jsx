@@ -3,12 +3,14 @@ import React from 'react'
 import styles from "./reviews.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-const Slider = dynamic(() => import('react-slick'), {
-    ssr: false,
-});
+// import dynamic from 'next/dynamic'
+// const Slider = dynamic(() => import('react-slick'), {
+//     ssr: false,
+// });
+import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import "@/components/carousel/carousel2.css";
 
 const Reviews = () => {
 
@@ -37,12 +39,13 @@ const Reviews = () => {
     ]
 
     const settings = {
-        dots: true,
+        // dots: true,
         infinite: true,
+        arrows: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
     }
