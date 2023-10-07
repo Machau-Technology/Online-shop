@@ -107,7 +107,7 @@ const Shipping = () => {
 
 
 
-                        const response = await axiosInstance.post("/phonepe-integration", data);
+                        const response = await axiosInstance.post("/api/phonepe-integration", data);
                         console.log(response);
 
                         router.push(response.data);
