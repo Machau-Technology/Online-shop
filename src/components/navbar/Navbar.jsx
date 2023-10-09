@@ -1,12 +1,11 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import styles from "./navbar.module.css"
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+"use client";
+import React, { useEffect, useState } from "react";
+import styles from "./navbar.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-
     const pathName = usePathname();
     // console.log(pathName);
 
@@ -26,7 +25,7 @@ const Navbar = () => {
         setOpenPod(false);
         setOpenCom(false);
         setOpenRes(!openRes);
-    }
+    };
 
     const handleComClick = () => {
         setOpenPod(false);
@@ -88,7 +87,10 @@ const Navbar = () => {
 
                                 <Link href="/shop/master-sticker/ms-75">
                                     <span
-                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75" ? styles["active"] : ""}`}
+                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                                                ? styles["active"]
+                                                : ""
+                                            }`}
                                     >
                                         MasterSticker 075
                                     </span>
@@ -96,7 +98,10 @@ const Navbar = () => {
 
                                 <Link href="/shop/master-sticker/ms-100">
                                     <span
-                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100" ? styles["active"] : ""}`}
+                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100"
+                                                ? styles["active"]
+                                                : ""
+                                            }`}
                                     >
                                         MasterSticker 100
                                     </span>
@@ -104,13 +109,16 @@ const Navbar = () => {
 
                                 <Link href="/shop/master-sticker/ms-150">
                                     <span
-                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-150" ? styles["active"] : ""}`}
+                                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-150"
+                                                ? styles["active"]
+                                                : ""
+                                            }`}
                                     >
                                         MasterSticker 150
                                     </span>
                                 </Link>
                             </div>
-                        }
+            )}
                     </div>
 
                     <div className={styles.res}>
@@ -282,4 +290,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

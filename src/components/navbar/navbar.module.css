@@ -1,42 +1,44 @@
-.empty{
-    width: 100vw;
-    height: 75px;
+.empty {
+  width: 100vw;
+  height: 75px;
 }
 
-.container{
-    width: 100%;
-    height: 75px;
-    background: #FFF;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.10);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6%;
-    position: fixed;
-    top: 0;
-    z-index: 100;
+.container {
+  width: 100%;
+  height: 75px;
+  background: #fff;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
-.links{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.pod, .res, .com{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    position: relative;
+.pod,
+.res,
+.com {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  position: relative;
 }
 
-.linkName{
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
+.linkName {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .arrOpen{
@@ -57,44 +59,44 @@
     box-shadow: 10px 5px 40px 0px rgba(0, 0, 0, 0.25);
 }
 
-.option{
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+.option {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.option:hover{
-    color: teal;
+.option:hover {
+  color: teal;
 }
 
-.active{
-    color: #F4621A;
+.active {
+  color: #f4621a;
 }
 
-.shopBtn{
-    display: block;
-    width: 220px;
-    height: 48px;
-    border-radius: 10px;
-    background: #F46219;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
+.shopBtn {
+  display: block;
+  width: 220px;
+  height: 48px;
+  border-radius: 10px;
+  background: #f46219;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
 }
-.shopBtnMob{
-    display: none;
+.shopBtnMob {
+  display: none;
 }
-.limg{
-    width: 59px;
-    height: 59px;
+.limg {
+  width: 59px;
+  height: 59px;
 }
 
 .line{
@@ -110,26 +112,25 @@
 }
 
 @media screen and (max-width: 464px) {
-    .shopBtn{
-        display: none;
-    }
-    .shopBtnMob{
-        display: block;
-
-    }
-    .limg{
-        width: 40px;
-        height: 40px;
-        margin: 6px 0 0 0;
-    }
-    .container{
-        width: 100%;
-        height: 58px;
-    }
-    .empty{
-        width: 100vw;
-        height: 53px;
-    }
+  .shopBtn {
+    display: none;
+  }
+  .shopBtnMob {
+    display: block;
+  }
+  .limg {
+    width: 40px;
+    height: 40px;
+    margin: 6px 0 0 0;
+  }
+  .container {
+    width: 100%;
+    height: 58px;
+  }
+  .empty {
+    width: 100vw;
+    height: 53px;
+  }
 
     .links{
         /* margin-left: 150px; */
