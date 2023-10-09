@@ -88,8 +88,8 @@ const Navbar = () => {
                                 <Link href="/shop/master-sticker/ms-75">
                                     <span
                                         className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
-                                                ? styles["active"]
-                                                : ""
+                                            ? styles["active"]
+                                            : ""
                                             }`}
                                     >
                                         MasterSticker 075
@@ -99,8 +99,8 @@ const Navbar = () => {
                                 <Link href="/shop/master-sticker/ms-100">
                                     <span
                                         className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100"
-                                                ? styles["active"]
-                                                : ""
+                                            ? styles["active"]
+                                            : ""
                                             }`}
                                     >
                                         MasterSticker 100
@@ -110,15 +110,15 @@ const Navbar = () => {
                                 <Link href="/shop/master-sticker/ms-150">
                                     <span
                                         className={`${styles.option} ${pathName === "/shop/master-sticker/ms-150"
-                                                ? styles["active"]
-                                                : ""
+                                            ? styles["active"]
+                                            : ""
                                             }`}
                                     >
                                         MasterSticker 150
                                     </span>
                                 </Link>
                             </div>
-            )}
+                        }
                     </div>
 
                     <div className={styles.res}>
