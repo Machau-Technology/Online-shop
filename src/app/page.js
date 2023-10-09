@@ -17,7 +17,7 @@ export default function Home() {
   const items = [
     { component: <Slide1 /> },
     { component: <Slide2 /> },
-    { component: <Slide3 /> },
+    // { component: <Slide3 /> },
   ];
 
   return (

@@ -46,6 +46,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 90px;
+    z-index: 10;
 }
 
 .left{

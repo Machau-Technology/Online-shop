@@ -23,6 +23,10 @@
 
 @media screen and (max-width: 464px) {
 
+    .container{
+        padding-top: 50px;
+    }
+
     .head{
         font-size: 24px;
         letter-spacing: normal;

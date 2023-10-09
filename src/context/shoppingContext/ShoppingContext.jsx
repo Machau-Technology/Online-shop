@@ -54,27 +54,27 @@ export function FormDataProvider({ children }) {
 
     const loadInitialData = () => {
         if (typeof window !== 'undefined') {
-          const storedData = sessionStorage.getItem('formData');
-          if (storedData) {
-            return JSON.parse(storedData);
-          }
+            const storedData = sessionStorage.getItem('formData');
+            if (storedData) {
+                return JSON.parse(storedData);
+            }
         }
         return {
-          tagCount: 1,
-          stickerCount75: 1,
-          stickerCount100: 1,
-          stickerCount150: 1,
-          tagShop: false,
-          stickerShop75: false,
-          stickerShop100: false,
-          stickerShop150: false,
-          tagPrice: 999,
-          stickerPrice75: 99,
-          stickerPrice100: 99,
-          stickerPrice150: 99,
-          cart: [],
+            tagCount: 1,
+            stickerCount75: 1,
+            stickerCount100: 1,
+            stickerCount150: 1,
+            tagShop: false,
+            stickerShop75: false,
+            stickerShop100: false,
+            stickerShop150: false,
+            tagPrice: 999,
+            stickerPrice75: 99,
+            stickerPrice100: 99,
+            stickerPrice150: 99,
+            cart: [],
         };
-      };
+    };
 
 
     const [activeStep, setActiveStep] = useState(initialStep);
