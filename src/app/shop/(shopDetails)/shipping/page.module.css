@@ -60,7 +60,7 @@
 }
 
 .number > .warning {
-  left: 300px;
+  left: 60px;
 }
 
 .row {
@@ -157,6 +157,11 @@
   cursor: pointer;
 }
 
+.disabled{
+  background-color: gray;
+  cursor: not-allowed;
+}
+
 
 
 @media screen and (max-width: 464px){
@@ -215,6 +220,24 @@
   cursor: pointer;
   margin: 0 0 1rem 0;
 }
+
+.disabled{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: gray;
+  color: #f7fafc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 0 1rem 0;
+}
+
 .cancel{
   margin: 0 0 1rem 0;
 }

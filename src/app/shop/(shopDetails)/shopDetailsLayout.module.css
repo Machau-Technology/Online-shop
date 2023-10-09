@@ -206,21 +206,22 @@
         flex-direction: column;
         height: max-content;
         gap: 0px;
-        /* padding: 0 0.rem 0 1rem; */
+        padding: 0 0.5rem;
     }
+
     .procedures{
-    width: 95%;
-    height: auto;
-    margin-top: 40px;
-    padding: 2rem 0 0 0;
-    border-radius: 15px;
-    background: #FFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-    place-self: center;
+        width: 95%;
+        height: auto;
+        margin-top: 40px;
+        padding: 2rem 0 0 0;
+        border-radius: 15px;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+        place-self: center;
     }
 
     .summarySection{
@@ -231,27 +232,66 @@
         border-radius: 15px;
         padding: 2rem 1rem 0 1rem;
     }
-.products{
-    gap: 30px;
-}
-.btn1 {
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    height: 39px;
-    width: 113px;
-    border-radius: 10px;
-    border: 1px solid #000;
-}
-.productDetails {
-    gap: 0px;
-}
-.billing{
-    gap: 0px;
-}
+    .products{
+        gap: 30px;
+    }
+
+    .productCat{
+        font-size: 15px;
+    }
+
+    .productName{
+        font-size: 13px;
+    }
+
+    .btn1 {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        height:20px;
+        width: 113px;
+        border-radius: 20px;
+        border: 1.5px solid #000;
+    }
+
+    .calc{
+        font-size: 15px;
+    }
+
+    .productDetails {
+        gap: 0px;
+        margin-left: -10px;
+    }
+
+    .billing{
+        gap: 0px;
+    }
+
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .billCat{
+        font-size: 15px;
+    }
+
+    .billAmt{
+        font-size: 17px;
+    }
+
+    .totRow{
+        margin-top: 7px;
+    }
+
+    .shipAmt{
+        font-size: 17px;
+    }
 
 
 }
+

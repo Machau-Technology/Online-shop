@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import dynamic from 'next/dynamic'
 // const Slider = dynamic(() => import('react-slick'), {
 //     ssr: false,
@@ -10,8 +10,30 @@ import 'slick-carousel/slick/slick-theme.css';
 import "./carousel.css"
 
 const Carousel = ({ items }) => {
+
+    const [showDots, setShowDots] = useState(false);
+
+    useEffect(() => {
+
+        const handleResize = () => {
+            if (window.innerWidth < 464) {
+                setShowDots(false);
+            } else {
+                setShowDots(true);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const settings = {
-        dots: true,
+        dots: showDots,
         infinite: true,
         arrows: false,
         speed: 0,
@@ -20,18 +42,6 @@ const Carousel = ({ items }) => {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
-
-        // appendDots: dots => (
-        //     <div style={{ position: 'absolute', bottom: '45px', left: '50%', transform: 'translateX(-50%)' }}>
-        //         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-        //             {dots.map((dot, index) => (
-        //                 <li key={index} style={{ display: 'inline-block', margin: '0 5px' }}>
-        //                     {dot}
-        //                 </li>
-        //             ))}
-        //         </ul>
-        //     </div>
-        // ),
     };
 
     return (

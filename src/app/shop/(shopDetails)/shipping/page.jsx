@@ -57,16 +57,33 @@ const Shipping = () => {
             .matches(/^[0-9]{10}$/, 'Contact number is not valid')
             .required('Contact number is required'),
         addressLine1: Yup.string().required('First line of address is required'),
+        fullName: Yup.string().required('You name is required'),
         addressLine2: Yup.string().test(
-            'isValidState',
-            'Please enter a valid state',
+            // 'isValidState',
+            // 'Please enter a valid state',
+            // function (value) {
+            //     if (value && value.trim().length > 0) {
+            //         const parts = value.trim().split(' ');
+            //         const lastEntry = parts[parts.length - 1];
+            //         return isValidState(lastEntry);
+            //     }
+            //     return true;
+            // }
+
             function (value) {
                 if (value && value.trim().length > 0) {
-                    const parts = value.trim().split(' ');
-                    const lastEntry = parts[parts.length - 1];
-                    return isValidState(lastEntry);
+
+                    const words = value.trim().split(' ');
+
+                    const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
+
+                    for (const word of words) {
+                        if (validStatesPattern.test(word)) {
+                            return true;
+                        }
+                    }
                 }
-                return true;
+                return false;
             }
         )
             .required('Second line of address is required'),
@@ -89,6 +106,7 @@ const Shipping = () => {
                     addressLine2: '',
                     postcode: '',
                     email: '',
+                    fullName: '',
                 }}
                 validationSchema={validationSchema}
                 onSubmit={async (values, { setSubmitting }) => {
@@ -153,40 +171,8 @@ const Shipping = () => {
                                         className={styles.warning}
                                     />
                                 </div>
-
-
-                                {/* <Field type="Number" name="email" className={styles["formInput"]} required />
-                                <ErrorMessage
-                                    name="email"
-                                    component="div"
-                                    className={styles.warning}
-                                /> */}
                             </div>
                         </div>
-
-
-
-
-
-
-                        {/* <div className={`${styles.row} ${styles.contact}`}>
-                            <label className={styles.contactLabel} htmlFor="contactNumber">Contact Number</label>
-                            <div className={styles.number}>
-                                <div className={styles.code}>+91</div>
-                                <Field
-                                    type="text"
-                                    name="contactNumber"
-                                    className={`${styles.formInput} ${values.contactNumber ? styles['is-valid'] : ''}`}
-                                    required
-
-                                />
-                                <ErrorMessage
-                                    name="contactNumber"
-                                    component="div"
-                                    className={styles.warning}
-                                />
-                            </div>
-                        </div> */}
 
                         <div className={styles["address"]}>
                             <label className={styles.genLabel} htmlFor="addressLine1">First line of address</label>
@@ -283,7 +269,8 @@ const Shipping = () => {
                             </button>
                             <button
                                 type="submit"
-                                className={styles.submit}
+                                // className={styles.submit}
+                                className={`${styles.submit} ${(errors.fullName || errors.email || errors.contactNumber || errors.addressLine1 || errors.addressLine2 || errors.postcode || !values.fullName) ? styles["disabled"] : ""}`}
                                 disabled={isSubmitting}
                             >
                                 Payment

@@ -10,7 +10,7 @@ const Slide1 = () => {
             <div className={styles.left}>
                 <div className={styles.line}></div>
                 <div className={styles.contents}>
-                    <span className={styles.modern}>Modern solution for modern problem!</span>
+                    <span className={styles.modern}>India’s first user-friendly tracking solutions!</span>
                     <h2 className={styles.save}>Save flat 60% + get <br /> free accessories</h2>
                     <Link href="/shop" className={styles.shopLink}>
                         <button className={styles.btn}>Shop now</button>
