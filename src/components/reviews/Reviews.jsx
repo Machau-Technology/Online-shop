@@ -10,7 +10,7 @@ import Link from 'next/link'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import "@/components/carousel/carousel2.css";
+import "./carousel2.css";
 
 const Reviews = () => {
 
@@ -39,7 +39,7 @@ const Reviews = () => {
     ]
 
     const settings = {
-        // dots: true,
+        dots: true,
         infinite: true,
         arrows: false,
         speed: 500,

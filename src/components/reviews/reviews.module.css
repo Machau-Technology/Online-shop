@@ -162,8 +162,8 @@
     }
 
     .slide{
-        padding-left: 40px;
-        height: 260px
+        padding-left: 18%;
+        height: 260px;
     }
 
     .card{
@@ -233,4 +233,35 @@
 
 
 }
+
+
+@media screen and (max-width: 430px) {
+
+    .slide{
+        padding-left: 13%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .slide{
+        padding-left: 10%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 385px) {
+
+    .slide{
+        padding-left: 9%;
+    }
+
+}
+
 
