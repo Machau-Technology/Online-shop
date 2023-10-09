@@ -144,7 +144,7 @@
 
     .container{
         gap: 85px;
-        height: 750px;
+        height: 650px;
     }
 
     .reviews{
@@ -208,7 +208,7 @@
 
     .linkSection{
         gap: 12px;
-        margin-top: -20px;
+        margin-top: -40px;
     }
     
     .appInfo{

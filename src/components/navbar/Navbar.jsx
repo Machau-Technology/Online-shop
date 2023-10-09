@@ -13,10 +13,12 @@ const Navbar = () => {
     const [openPod, setOpenPod] = useState(false);
     const [openRes, setOpenRes] = useState(false);
     const [openCom, setOpenCom] = useState(false);
+    const [openLine, setOpenLine] = useState(false);
 
     const handlePodClick = () => {
         setOpenRes(false);
         setOpenCom(false);
+        setOpenLine(false);
         setOpenPod(!openPod);
     }
 
@@ -32,10 +34,17 @@ const Navbar = () => {
         setOpenCom(!openCom);
     }
 
+    const handleLineClick = () => {
+        setOpenPod(false);
+        setOpenLine(!openLine);
+        // console.log("called...")
+    }
+
     useEffect(() => {
         setOpenPod(false);
         setOpenRes(false);
         setOpenCom(false);
+        setOpenLine(false);
     }, [pathName])
 
     return (
@@ -64,7 +73,8 @@ const Navbar = () => {
                             alt='ArrowDown'
                             width={8}
                             height={6}
-                            onClick={e => setOpenPod(!openPod)}
+                            className={`${openPod ? styles["arrOpen"] : styles["arr"]}`}
+                            onClick={handlePodClick}
                         />
                         {openPod &&
                             <div className={styles.options}>
@@ -115,6 +125,7 @@ const Navbar = () => {
                             alt='ArrowDown'
                             width={8}
                             height={6}
+                            className={`${openRes ? styles["arrOpen"] : styles["arr"]}`}
                             onClick={handleResClick}
                         />
                         {openRes &&
@@ -150,6 +161,7 @@ const Navbar = () => {
                             alt='ArrowDown'
                             width={8}
                             height={6}
+                            className={`${openCom ? styles["arrOpen"] : styles["arr"]}`}
                             onClick={handleComClick}
                         />
                         {openCom &&
@@ -180,13 +192,90 @@ const Navbar = () => {
                         />
 
                     </Link>
-                    <Image
-                        src="/assets/ThreeLines.png"
-                        width={20}
-                        height={15}
-                        alt='ThreeLines'
-                        className={styles.three}
-                    />
+                    <div className={styles.line}>
+                        <Image
+                            src="/assets/ThreeLines.png"
+                            width={20}
+                            height={15}
+                            alt='ThreeLines'
+                            className={styles.three}
+                            onClick={handleLineClick}
+                        />
+                        {openLine &&
+                            <div className={styles.mobDown}>
+                                <div className={styles.resMob}>
+                                    <div className={styles.lineHead}>
+                                        <span
+                                            className={styles.linkName}
+                                            onClick={handleResClick}
+                                        >
+                                            Resources
+                                        </span>
+                                        <Image
+                                            src="/assets/ArrowDown.png"
+                                            alt='ArrowDown'
+                                            width={8}
+                                            height={6}
+                                            className={`${openRes ? styles["arrOpenMob"] : styles["arrMob"]}`}
+                                            onClick={handleResClick}
+                                        />
+                                    </div>
+                                    {openRes &&
+                                        <div className={styles.optionsMob}>
+                                            <span
+                                                className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""}`}
+                                            >
+                                                Help
+                                            </span>
+                                            <span
+                                                className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75" ? styles["active"] : ""}`}
+                                            >
+                                                How it works
+                                            </span>
+                                            <span
+                                                className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100" ? styles["active"] : ""}`}
+                                            >
+                                                Compare with
+                                            </span>
+                                        </div>
+                                    }
+                                </div>
+
+                                <div className={styles.comMob}>
+                                    <div className={styles.lineHead}>
+                                        <span
+                                            className={styles.linkName}
+                                            onClick={handleComClick}
+                                        >
+                                            Community
+                                        </span>
+                                        <Image
+                                            src="/assets/ArrowDown.png"
+                                            alt='ArrowDown'
+                                            width={8}
+                                            height={6}
+                                            className={`${openCom ? styles["arrOpenMob"] : styles["arrMob"]}`}
+                                            onClick={handleComClick}
+                                        />
+                                    </div>
+                                    {openCom &&
+                                        <div className={styles.optionsMob}>
+                                            <span
+                                                className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""}`}
+                                            >
+                                                Join community
+                                            </span>
+                                            <span
+                                                className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75" ? styles["active"] : ""}`}
+                                            >
+                                                About community
+                                            </span>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </>

@@ -36,4 +36,9 @@
         padding: 8% 0;
     }
 
+    .circ{
+        width: 250px;
+        height: 250px;
+    }
+
 }

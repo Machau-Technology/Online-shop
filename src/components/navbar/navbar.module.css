@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+.arrOpen{
+    transform: rotate(180deg);
+}
+
 .options{
     position: absolute;
     top: 45px;
@@ -93,7 +97,15 @@
     height: 59px;
 }
 
-.three{
+.line{
+    display: none;
+}
+
+/* .three{
+    display: none;
+} */
+
+.mobDown{
     display: none;
 }
 
@@ -119,13 +131,66 @@
         height: 53px;
     }
 
-    .pod, .res, .com{
+    .links{
+        /* margin-left: 150px; */
+        gap: 20px;
+    }
+
+    .res, .com{
         display: none;
     }
 
-    .three{
+    .options{
+        background-color: #E8E8E8;
+        gap: 4px;
+        padding: 10px;
+        top: 42px;
+    }
+
+    .option{
+        font-size: 12px;
+    }
+
+    .line{
+        display: block;
+        position: relative;
+    }
+
+    .mobDown{
+        display: block;
+        position: absolute;
+        top: 42px;
+        right: -15px;
+        width: 150px;
+        height: auto;
+        z-index: 10;
+        background-color: #FFF;
+    }
+
+    .resMob, .comMob{
         display: block;
     }
+
+    .lineHead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .arrMob{
+        transform: rotate(-90deg);
+    }
+
+    .optionsMob{
+        background-color: #E8E8E8;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px 10px;
+    }
+
+
 
 
 }
