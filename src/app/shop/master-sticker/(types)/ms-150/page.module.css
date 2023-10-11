@@ -220,7 +220,8 @@
     }
 
     .amount{
-        display: none;
+        display: block;
+        font-size: 14px;
     }
 
     .btn1{
@@ -239,11 +240,11 @@
         height: 20px;
     }
 
-    .btn2{
+    /* .btn2{
         width: 80px;
         height: 20px;
         font-size: 10px;
-    }
+    } */
 
     .liner{
         display: flex;
@@ -255,7 +256,8 @@
     }
 
     .left{
-        gap: 18px;
+        /* gap: 18px; */
+        display: none;
     }
 
     .right{
@@ -285,6 +287,42 @@
         height: 17px;
         font-size: 9px;
         letter-spacing: -0.09px;
+    }
+    .btn2 {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+        margin: 0 0 0 95%;
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+
+    .btn2 {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+        margin: 0 0 0 85%;
+    }
+}
+
+@media screen and (max-width: 395px) {
+
+    .btn2 {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+        margin: 0 0 0 70%;
+    }
+}
+@media screen and (max-width: 385px) {
+
+    .btn2 {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+        margin: 0 0 0 62%;
     }
 
 }

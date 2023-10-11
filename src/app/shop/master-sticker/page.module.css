@@ -1,11 +1,12 @@
 .container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
     gap: 90px;
     width: 100vw;
-    height: 772px;
+    height: 700px;
+    padding: 0 0 5rem 0;
     background: linear-gradient(180deg, #F46219 0%, #F4B63A 100%);
 }
 
@@ -26,6 +27,7 @@
     font-style: normal;
     font-weight: 600;
     cursor: pointer;
+    border: none;
 }
 
 
@@ -33,12 +35,26 @@
 
     .container{
         height: auto;
-        padding: 8% 0;
+        padding: 18% 0;
+        gap: 60px;
     }
 
     .circ{
-        width: 250px;
-        height: 250px;
+        width: 130%;
+        height: auto;
     }
-
+    .circ2{
+        width: 95%;
+        height: auto;
+    }
+    .circ3{
+        width: 100%;
+        height: auto;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 }

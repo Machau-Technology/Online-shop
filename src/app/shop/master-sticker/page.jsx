@@ -8,9 +8,9 @@ const MasterSticker = () => {
         <div className={styles.container}>
             <div className={styles.col}>
                 <Image
-                    src="/assets/Circle75.svg"
-                    width={374}
-                    height={374}
+                    src="/assets/col1.png"
+                    width={292}
+                    height={305}
                     className={styles.circ}
                 />
                 <Link href="/shop/master-sticker/ms-75">
@@ -22,10 +22,10 @@ const MasterSticker = () => {
 
             <div className={styles.col}>
                 <Image
-                    src="/assets/Circle100.svg"
-                    width={374}
-                    height={374}
-                    className={styles.circ}
+                    src="/assets/col2.png"
+                    width={379}
+                    height={403}
+                    className={styles.circ2}
                 />
                 <Link href="/shop/master-sticker/ms-100">
                     <button className={styles.btn}>
@@ -36,10 +36,10 @@ const MasterSticker = () => {
 
             <div className={styles.col}>
                 <Image
-                    src="/assets/Circle150.svg"
-                    width={374}
-                    height={374}
-                    className={styles.circ}
+                    src="/assets/col3.png"
+                    width={520}
+                    height={480}
+                    className={styles.circ3}
                 />
                 <Link href="/shop/master-sticker/ms-150">
                     <button className={styles.btn}>

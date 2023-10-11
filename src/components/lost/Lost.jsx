@@ -12,12 +12,10 @@ const Lost = () => {
                     <span className={styles.stickerHead}>MasterSticker</span>
                     <div className={styles.stickerInfo}>
                         <span className={styles.infoHead}>
-                            One Charge = 4-6 Months Life;
+                        Peel It. Stick It. Get It.
                         </span>
                         <p className={styles.stickerDesc}>
-                            MasterTag is India’s first re-chargeable BLE
-                            tracking device, powered by an inbuilt
-                            Lithium-ion battery with magnetic charger.
+                        Unlock the magic of MasterSticker, India's pioneering QR Sticker, reuniting lost treasures with their cherished owners in a snap. Stick it to be found!
                         </p>
                     </div>
                 </div>
