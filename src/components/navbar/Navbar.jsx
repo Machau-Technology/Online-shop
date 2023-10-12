@@ -65,7 +65,7 @@ const Navbar = () => {
           />
         </Link>
         <div className={styles.links}>
-          <div className={styles.pod}>
+          <div className={`${styles.pod} ${openPod ? styles["open"] : ""}`}>
             <span className={styles.linkName} onClick={handlePodClick}>
               Products
             </span>
@@ -81,9 +81,8 @@ const Navbar = () => {
               <div className={styles.options}>
                 <Link href="/shop">
                   <span
-                    className={`${styles.option} ${
-                      pathName === "/shop" ? styles["active"] : ""
-                    }`}
+                    className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""
+                      }`}
                   >
                     MasterTag
                   </span>
@@ -91,11 +90,10 @@ const Navbar = () => {
 
                 <Link href="/shop/master-sticker/ms-75">
                   <span
-                    className={`${styles.option} ${
-                      pathName === "/shop/master-sticker/ms-75"
-                        ? styles["active"]
-                        : ""
-                    }`}
+                    className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                      ? styles["active"]
+                      : ""
+                      }`}
                   >
                     MasterSticker 075
                   </span>
@@ -103,11 +101,10 @@ const Navbar = () => {
 
                 <Link href="/shop/master-sticker/ms-100">
                   <span
-                    className={`${styles.option} ${
-                      pathName === "/shop/master-sticker/ms-100"
-                        ? styles["active"]
-                        : ""
-                    }`}
+                    className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100"
+                      ? styles["active"]
+                      : ""
+                      }`}
                   >
                     MasterSticker 100
                   </span>
@@ -115,11 +112,10 @@ const Navbar = () => {
 
                 <Link href="/shop/master-sticker/ms-150">
                   <span
-                    className={`${styles.option} ${
-                      pathName === "/shop/master-sticker/ms-150"
-                        ? styles["active"]
-                        : ""
-                    }`}
+                    className={`${styles.option} ${pathName === "/shop/master-sticker/ms-150"
+                      ? styles["active"]
+                      : ""
+                      }`}
                   >
                     MasterSticker 150
                   </span>
@@ -128,7 +124,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className={styles.res}>
+          <div className={`${styles.res} ${openRes ? styles["open"] : ""}`}>
             <span className={styles.linkName} onClick={handleResClick}>
               Resources
             </span>
@@ -143,27 +139,24 @@ const Navbar = () => {
             {openRes && (
               <div className={styles.options}>
                 <span
-                  className={`${styles.option} ${
-                    pathName === "/shop" ? styles["active"] : ""
-                  }`}
+                  className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""
+                    }`}
                 >
                   Help
                 </span>
                 <span
-                  className={`${styles.option} ${
-                    pathName === "/shop/master-sticker/ms-75"
-                      ? styles["active"]
-                      : ""
-                  }`}
+                  className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                    ? styles["active"]
+                    : ""
+                    }`}
                 >
                   How it works
                 </span>
                 <span
-                  className={`${styles.option} ${
-                    pathName === "/shop/master-sticker/ms-100"
-                      ? styles["active"]
-                      : ""
-                  }`}
+                  className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100"
+                    ? styles["active"]
+                    : ""
+                    }`}
                 >
                   Compare with
                 </span>
@@ -171,7 +164,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className={styles.com}>
+          <div className={`${styles.com} ${openCom ? styles["open"] : ""}`}>
             <span className={styles.linkName} onClick={handleComClick}>
               Community
             </span>
@@ -186,18 +179,16 @@ const Navbar = () => {
             {openCom && (
               <div className={styles.options}>
                 <span
-                  className={`${styles.option} ${
-                    pathName === "/shop" ? styles["active"] : ""
-                  }`}
+                  className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""
+                    }`}
                 >
                   Join community
                 </span>
                 <span
-                  className={`${styles.option} ${
-                    pathName === "/shop/master-sticker/ms-75"
-                      ? styles["active"]
-                      : ""
-                  }`}
+                  className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                    ? styles["active"]
+                    : ""
+                    }`}
                 >
                   About community
                 </span>
@@ -230,18 +221,18 @@ const Navbar = () => {
 
             {openLine && (
               <Image
-                src="/assets/cross.svg"
-                width={20}
-                height={15}
+                src="/assets/cross.png"
+                width={38}
+                height={38}
                 alt="ThreeLines"
-                className={styles.three}
+                className={styles.cross}
                 onClick={handleLineClick}
               />
             )}
 
             {openLine && (
               <div className={styles.mobDown}>
-                <div className={styles.resMob}>
+                <div className={`${styles.resMob} ${openRes ? styles["open"] : ""}`}>
                   <div className={styles.lineHead}>
                     <span className={styles.linkName} onClick={handleResClick}>
                       Resources
@@ -251,36 +242,32 @@ const Navbar = () => {
                       alt="ArrowDown"
                       width={8}
                       height={6}
-                      className={`${
-                        openRes ? styles["arrOpenMob"] : styles["arrMob"]
-                      }`}
+                      className={`${openRes ? styles["arrOpenMob"] : styles["arrMob"]
+                        }`}
                       onClick={handleResClick}
                     />
                   </div>
                   {openRes && (
                     <div className={styles.optionsMob}>
                       <span
-                        className={`${styles.option} ${
-                          pathName === "/shop" ? styles["active"] : ""
-                        }`}
+                        className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""
+                          }`}
                       >
                         Help
                       </span>
                       <span
-                        className={`${styles.option} ${
-                          pathName === "/shop/master-sticker/ms-75"
-                            ? styles["active"]
-                            : ""
-                        }`}
+                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                          ? styles["active"]
+                          : ""
+                          }`}
                       >
                         How it works
                       </span>
                       <span
-                        className={`${styles.option} ${
-                          pathName === "/shop/master-sticker/ms-100"
-                            ? styles["active"]
-                            : ""
-                        }`}
+                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-100"
+                          ? styles["active"]
+                          : ""
+                          }`}
                       >
                         Compare with
                       </span>
@@ -288,7 +275,7 @@ const Navbar = () => {
                   )}
                 </div>
 
-                <div className={styles.comMob}>
+                <div className={`${styles.comMob} ${openCom ? styles["open"] : ""}`}>
                   <div className={styles.lineHead}>
                     <span className={styles.linkName} onClick={handleComClick}>
                       Community
@@ -298,27 +285,24 @@ const Navbar = () => {
                       alt="ArrowDown"
                       width={8}
                       height={6}
-                      className={`${
-                        openCom ? styles["arrOpenMob"] : styles["arrMob"]
-                      }`}
+                      className={`${openCom ? styles["arrOpenMob"] : styles["arrMob"]
+                        }`}
                       onClick={handleComClick}
                     />
                   </div>
                   {openCom && (
                     <div className={styles.optionsMob}>
                       <span
-                        className={`${styles.option} ${
-                          pathName === "/shop" ? styles["active"] : ""
-                        }`}
+                        className={`${styles.option} ${pathName === "/shop" ? styles["active"] : ""
+                          }`}
                       >
                         Join community
                       </span>
                       <span
-                        className={`${styles.option} ${
-                          pathName === "/shop/master-sticker/ms-75"
-                            ? styles["active"]
-                            : ""
-                        }`}
+                        className={`${styles.option} ${pathName === "/shop/master-sticker/ms-75"
+                          ? styles["active"]
+                          : ""
+                          }`}
                       >
                         About community
                       </span>

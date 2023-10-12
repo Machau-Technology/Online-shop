@@ -55,6 +55,10 @@
         flex-direction: row-reverse;
     }
 
+    .item:last-child{
+        margin-left: -60px;
+    }
+
     .gif{
         width: 50px;
         height: 50px;

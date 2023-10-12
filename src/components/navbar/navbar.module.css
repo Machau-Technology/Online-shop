@@ -34,6 +34,10 @@
   position: relative;
 }
 
+.open{
+  color: #F46219;
+}
+
 .linkName {
   font-size: 16px;
   font-style: normal;
@@ -160,7 +164,7 @@
     .mobDown{
         display: block;
         position: absolute;
-        top: 42px;
+        top: 45px;
         right: -15px;
         width: 150px;
         height: auto;
@@ -189,6 +193,10 @@
         flex-direction: column;
         gap: 5px;
         padding: 5px 10px;
+    }
+
+    .cross{
+      margin-top: 5px;
     }
 
 

@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import styles from "./page.module.css"
 import ShopCarousel from '@/components/shopCarousel/ShopCarousel'
-import Benefits from '@/components/benefits/Benefits'
 import Link from 'next/link'
 import { useFormData } from '@/context/shoppingContext/ShoppingContext'
 import Image from 'next/image'
+import BenefitsSticker from '@/components/benefits/BenefitsSticker'
 
 const MasterSticker75 = () => {
 
@@ -138,7 +138,7 @@ const MasterSticker75 = () => {
                 </div>
             </div>
 
-            <Benefits />
+            <BenefitsSticker />
             <div className={styles.others}>
                 <div className={styles.col}>
                     <Image
