@@ -52,6 +52,8 @@ const Shipping = () => {
             'new delhi',
             'puducherry',
             'pondicherry',
+            'west bengal',
+            'bengal',
         ];
         return validStates.includes(state);
     };
@@ -68,7 +70,7 @@ const Shipping = () => {
             'Please enter a valid state',
             function (value) {
                 if (value && value.trim().length > 0) {
-                    const state = value.toLocaleLowerCase();
+                    const state = value.toLowerCase();
                     const parts = state.trim().split(' ');
                     const lastEntry = parts[parts.length - 1];
                     return isValidState(lastEntry);
