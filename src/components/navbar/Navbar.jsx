@@ -13,7 +13,6 @@ const Navbar = () => {
   const [openRes, setOpenRes] = useState(false);
   const [openCom, setOpenCom] = useState(false);
   const [openLine, setOpenLine] = useState(false);
-  const [toggle, setToggle] = useState(true);
 
   const handlePodClick = () => {
     setOpenRes(false);
@@ -38,10 +37,6 @@ const Navbar = () => {
     setOpenPod(false);
     setOpenLine(!openLine);
     // console.log("called...")
-  };
-
-  const handleToggleClick = () => {
-    setToggle(!toggle);
   };
 
   useEffect(() => {
@@ -221,10 +216,10 @@ const Navbar = () => {
 
             {openLine && (
               <Image
-                src="/assets/cross.png"
-                width={38}
-                height={38}
-                alt="ThreeLines"
+                src="/assets/close2.png"
+                width={20}
+                height={18}
+                alt="close"
                 className={styles.cross}
                 onClick={handleLineClick}
               />

@@ -13,40 +13,45 @@ const Shipping = () => {
 
     const isValidState = (state) => {
         const validStates = [
-            'Andhra Pradesh',
-            'Arunachal Pradesh',
-            'Assam',
-            'Bihar',
-            'Chhattisgarh',
-            'Goa',
-            'Gujarat',
-            'Haryana',
-            'Himachal Pradesh',
-            'Jharkhand',
-            'Karnataka',
-            'Kerala',
-            'Madhya Pradesh',
-            'Maharashtra',
-            'Manipur',
-            'Meghalaya',
-            'Mizoram',
-            'Nagaland',
-            'Odisha',
-            'Punjab',
-            'Rajasthan',
-            'Sikkim',
-            'Tamil Nadu',
-            'Telangana',
-            'Tripura',
-            'Uttar Pradesh',
-            'Uttarakhand',
-            'West Bengal',
-            'Andaman and Nicobar Islands',
-            'Chandigarh',
-            'Dadra and Nagar Haveli and Daman and Diu',
-            'Lakshadweep',
-            'Delhi',
-            'Puducherry',
+            'andhra pradesh',
+            'arunachal pradesh',
+            'assam',
+            'bihar',
+            'chhattisgarh',
+            'goa',
+            'gujarat',
+            'haryana',
+            'himachal pradesh',
+            'jharkhand',
+            'karnataka',
+            'kerala',
+            'madhya pradesh',
+            'maharashtra',
+            'manipur',
+            'meghalaya',
+            'mizoram',
+            'nagaland',
+            'odisha',
+            'punjab',
+            'rajasthan',
+            'sikkim',
+            'tamil nadu',
+            'telangana',
+            'tripura',
+            'uttar pradesh',
+            'uttarakhand',
+            'west bengal',
+            'andaman and nicobar islands',
+            'andaman and nicobar',
+            'chandigarh',
+            'dadra and nagar haveli and daman and diu',
+            'dadra and nagar haveli',
+            'daman and diu',
+            'dakshadweep',
+            'delhi',
+            'new delhi',
+            'puducherry',
+            'pondicherry',
         ];
         return validStates.includes(state);
     };
@@ -59,32 +64,30 @@ const Shipping = () => {
         addressLine1: Yup.string().required('First line of address is required'),
         fullName: Yup.string().required('You name is required'),
         addressLine2: Yup.string().test(
-            // 'isValidState',
-            // 'Please enter a valid state',
-            // function (value) {
-            //     if (value && value.trim().length > 0) {
-            //         const parts = value.trim().split(' ');
-            //         const lastEntry = parts[parts.length - 1];
-            //         return isValidState(lastEntry);
-            //     }
-            //     return true;
-            // }
-
+            'isValidState',
+            'Please enter a valid state',
             function (value) {
                 if (value && value.trim().length > 0) {
-
-                    const words = value.trim().split(' ');
-
-                    const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
-
-                    for (const word of words) {
-                        if (validStatesPattern.test(word)) {
-                            return true;
-                        }
-                    }
+                    const state = value.toLocaleLowerCase();
+                    const parts = state.trim().split(' ');
+                    const lastEntry = parts[parts.length - 1];
+                    return isValidState(lastEntry);
                 }
-                return false;
+                return true;
             }
+
+            // function (value) {
+            //     if (value && value.trim().length > 0) {
+            //         const words = value.trim().split(' ');
+            //         const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
+            //         for (const word of words) {
+            //             if (validStatesPattern.test(word)) {
+            //                 return true;
+            //             }
+            //         }
+            //     }
+            //     return false;
+            // }
         )
             .required('Second line of address is required'),
         postcode: Yup.string().required('Postcode is required'),
@@ -243,7 +246,7 @@ const Shipping = () => {
                         <div className={styles.row}>
                             <div className={styles["postcode"]}>
                                 <label className={styles.genLabel} htmlFor="postcode">Postcode</label>
-                                <Field type="text" name="postcode" className={styles["formInput"]} required />
+                                <Field type="number" name="postcode" className={styles["formInput"]} required />
                                 <ErrorMessage
                                     name="postcode"
                                     component="div"
