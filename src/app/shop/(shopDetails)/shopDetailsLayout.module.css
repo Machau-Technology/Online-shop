@@ -224,6 +224,24 @@
         place-self: center;
     }
 
+    .steps{
+        gap: 10px;
+        padding: 0 30px;
+    }
+
+    .step{
+        font-size: 18px;
+    }
+
+    .line{
+        letter-spacing: -5px;
+    }
+
+    .check{
+        width: 22px;
+        height: 22px;
+    }
+
     .summarySection{
         width: 95%;
         place-self: center;

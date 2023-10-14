@@ -4,6 +4,8 @@ import StickOverview from '@/components/stickOverview/StickOverview';
 import Reviews from '@/components/reviews/Reviews';
 import Image from 'next/image';
 import Faqs from '@/components/faqs/Faqs';
+import FaqsSticker from '@/components/faqs/FaqsSticker';
+import Activate from '@/components/activate/Activate';
 
 export default function StickerLayout({ children }) {
 
@@ -50,8 +52,9 @@ export default function StickerLayout({ children }) {
                     </div>
                 </div>
             </div>
-            <Faqs />
-            <Reviews />
+            <FaqsSticker />
+            {/* <Reviews /> */}
+            <Activate />
         </div>
     );
 }

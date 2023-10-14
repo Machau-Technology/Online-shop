@@ -68,28 +68,28 @@ const Shipping = () => {
         addressLine2: Yup.string().test(
             'isValidState',
             'Please enter a valid state',
-            function (value) {
-                if (value && value.trim().length > 0) {
-                    const state = value.toLowerCase();
-                    const parts = state.trim().split(' ');
-                    const lastEntry = parts[parts.length - 1];
-                    return isValidState(lastEntry);
-                }
-                return true;
-            }
-
             // function (value) {
             //     if (value && value.trim().length > 0) {
-            //         const words = value.trim().split(' ');
-            //         const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
-            //         for (const word of words) {
-            //             if (validStatesPattern.test(word)) {
-            //                 return true;
-            //             }
-            //         }
+            //         const state = value.toLowerCase();
+            //         const parts = state.trim().split(' ');
+            //         const lastEntry = parts[parts.length - 1];
+            //         return isValidState(lastEntry);
             //     }
-            //     return false;
+            //     return true;
             // }
+
+            function (value) {
+                if (value && value.trim().length > 0) {
+                    const words = value.trim().split(' ');
+                    const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
+                    for (const word of words) {
+                        if (validStatesPattern.test(word)) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
         )
             .required('Second line of address is required'),
         postcode: Yup.string().required('Postcode is required'),

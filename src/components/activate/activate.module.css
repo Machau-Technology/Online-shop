@@ -1,0 +1,57 @@
+.container{
+    width: 100vw;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    color: #1E2A39;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.desc{
+    color: #5C6272;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+
+.msLink{
+    text-decoration: underline;
+}
+
+.msLink:hover{
+    color: teal;
+}
+
+
+@media screen and (max-width: 464px) {
+
+    .container{
+        gap: 20px;
+        height: 230px;
+    }
+
+    .head{
+        font-size: 24px;
+    }
+
+    .desc{
+        font-size: 14px;
+        width: 75%;
+    }
+
+    .go{
+        width: 60px;
+        height: 26px;
+    }
+
+}

@@ -18,7 +18,7 @@ const BenefitsSticker = () => {
                         Strong Adhesive
                     </span>
                     <span className={styles.lower}>
-                        Long lasting | Easy Remove | Stain Less
+                        Long lasting | Easy Remove
                     </span>
                 </div>
             </div>
@@ -35,11 +35,11 @@ const BenefitsSticker = () => {
                         Free Shipping
                     </span>
                     <span className={styles.lower}>
-                        FREE on All Orders
+                        FREE Shipping + Live Tracking
                     </span>
                 </div>
             </div>
-            <div className={styles.item}>
+            <div className={`${styles.item} ${styles.msLast}`}>
                 <Image
                     src="/assets/shield.gif"
                     width={75}
@@ -52,7 +52,7 @@ const BenefitsSticker = () => {
                         Water Proof
                     </span>
                     <span className={styles.lower}>
-                        Water | Splash | Tear Proof
+                        Resistant | Tear Proof
                     </span>
                 </div>
             </div>

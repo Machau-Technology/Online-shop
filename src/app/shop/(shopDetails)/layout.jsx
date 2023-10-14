@@ -113,12 +113,14 @@ export default function ShopDetailsLayout({ children }) {
                             width={30}
                             height={30}
                             alt="check"
+                            className={styles.check}
                         /> :
                         <Image
                             src="/assets/CheckBlack.png"
                             width={30}
                             height={30}
                             alt="check"
+                            className={styles.check}
                         />
                     }
 
