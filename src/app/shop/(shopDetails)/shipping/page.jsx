@@ -14,7 +14,10 @@ const Shipping = () => {
     const isValidState = (state) => {
         const validStates = [
             'andhra pradesh',
+            'andhra',
+            'pradesh',
             'arunachal pradesh',
+            'arunachal',
             'assam',
             'bihar',
             'chhattisgarh',
@@ -22,10 +25,12 @@ const Shipping = () => {
             'gujarat',
             'haryana',
             'himachal pradesh',
+            'himachal',
             'jharkhand',
             'karnataka',
             'kerala',
             'madhya pradesh',
+            'madhya',
             'maharashtra',
             'manipur',
             'meghalaya',
@@ -36,9 +41,12 @@ const Shipping = () => {
             'rajasthan',
             'sikkim',
             'tamil nadu',
+            'tamil',
+            'nadu',
             'telangana',
             'tripura',
             'uttar pradesh',
+            'uttar',
             'uttarakhand',
             'west bengal',
             'andaman and nicobar islands',
@@ -80,7 +88,8 @@ const Shipping = () => {
 
             function (value) {
                 if (value && value.trim().length > 0) {
-                    const words = value.trim().split(' ');
+                    const state = value.toLowerCase();
+                    const words = state.trim().split(' ');
                     const validStatesPattern = /^(Andhra|andhra|Pradesh|pradesh|Arunachal|arunachal|Assam|assam|Bihar|bihar|Chhattisgarh|chattisgarh|Goa|goa|Gujarat|gujarat|Haryana|haryana|Himachal|himachal|Jharkhand|jharkhand|Karnataka|karnataka|Kerala|kerala|Madhya|madhya|Maharashtra|maharashtra|Manipur|manipur|Meghalaya|meghalaya|Mizoram|mizoram|Nagaland|nagaland|Odisha|odisha|Punjab|punjab|Rajasthan|rajasthan|Sikkim|sikkim|Tamil|tamil|Nadu|nadu|Telangana|telangana|Tripura|tripura|Uttar|uttar|Uttarakhand|uttarakhand|West|west|Bengal|bengal|Andaman|andaman|Nicobar|nicobar|Chandigarh|chandigarh|Dadra|dadra|Nagar|nagar|Haveli|haveli|Daman|daman|Diu|diu|Lakshadweep|lakshadweep|Delhi|delhi|Puducherry|puducherry)$/;
                     for (const word of words) {
                         if (validStatesPattern.test(word)) {
