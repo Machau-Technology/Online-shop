@@ -57,48 +57,52 @@
     .tag1{
         width: 140px;
         height: 140px;
+        margin-left: 35%;
+
     }
 
     .tag2{
         width: 140px;
         height: 140px;
+        margin-left: 35%;
     }
 
     .tag3{
         width: 40px;
         height: 140px;
-        margin-left: 50px;
+        margin-left: 50%;
     }
 
     .tag4{
         width: 140px;
         height: 140px;
+        margin-left: 35%;
     }
 
     .sticker1, .sticker4, .sticker7{
         width: 157px;
         height: 122px;
-        margin-left: -10px;
+        margin-left: 30%;
         margin-top: 10px;
     }
 
     .sticker2, .sticker5, .sticker8{
         width: 105px;
         height: 120px;
-        margin-left: 10px;
+        margin-left: 38%;
     }
 
     .sticker3{
         width: 159px;
         height: 117px;
-        margin-left: -10px;
+        margin-left: 35%;
         margin-top: 20px;
     }
 
     .sticker6{
         width: 130px;
         height: 132px;
-        margin-left: -10px;
+        margin-left: 35%;
         margin-top: 5px;
     }
 
@@ -106,6 +110,6 @@
         width: 140px;
         height: 141px;
         margin-top: 0px;
-        margin-left: 0px;
+        margin-left: 35%;
     }
 }

@@ -38,6 +38,7 @@
         padding: 18% 0;
         gap: 60px;
         flex-direction: column;
+        align-items: center;
     }
 
     .circ{

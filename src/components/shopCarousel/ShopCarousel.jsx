@@ -18,7 +18,7 @@ const ShopCarousel = ({ data }) => {
         speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         pauseOnHover: false,
 
