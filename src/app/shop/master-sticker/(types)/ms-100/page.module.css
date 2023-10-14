@@ -273,8 +273,18 @@
         gap: 5px;
     }
 
-    .circle{
-        width: 120px;
+    .circle1{
+        width: 170px;
+        height: 120px;
+    }
+
+    .circle2{
+        width: 165px;
+        height: 125px;
+    }
+    
+    .circle3{
+        width: 125px;
         height: 120px;
     }
 

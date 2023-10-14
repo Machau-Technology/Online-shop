@@ -22,7 +22,7 @@ const Slide1 = () => {
             <div className={styles.right}>
                 <div className={styles.circle}>
                     <Image
-                        src="/assets/TagHome.svg"
+                        src="/assets/TagHome.png"
                         alt='Device1'
                         width={430}
                         height={390}

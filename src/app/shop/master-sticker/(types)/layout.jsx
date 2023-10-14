@@ -20,7 +20,7 @@ export default function StickerLayout({ children }) {
                 <div className={styles.main}>
                     <div className={styles.row}>
                         <Image
-                            src="/assets/Adhesive.svg"
+                            src="/assets/Adhesive.png"
                             width={150}
                             height={150}
                         />
@@ -28,7 +28,7 @@ export default function StickerLayout({ children }) {
                     </div>
                     <div className={styles.row}>
                         <Image
-                            src="/assets/Water.svg"
+                            src="/assets/Water.png"
                             width={150}
                             height={150}
                         />
@@ -36,7 +36,7 @@ export default function StickerLayout({ children }) {
                     </div>
                     <div className={styles.row}>
                         <Image
-                            src="/assets/Tear.svg"
+                            src="/assets/Tear.png"
                             width={150}
                             height={150}
                         />
@@ -44,7 +44,7 @@ export default function StickerLayout({ children }) {
                     </div>
                     <div className={styles.row}>
                         <Image
-                            src="/assets/AndroidSticker.svg"
+                            src="/assets/AndroidSticker.png"
                             width={150}
                             height={150}
                         />

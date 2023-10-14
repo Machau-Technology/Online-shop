@@ -6,11 +6,12 @@ const Overview = () => {
     return (
         <div className={styles.container}>
             <Image
-                src="/assets/Dimensions.svg"
+                src="/assets/Dimensions.png"
                 width={569}
                 height={604}
                 alt="Dimensions"
                 className={styles.left}
+                priority
             />
             <div className={styles.right}>
                 <Image

@@ -12,21 +12,21 @@ const MasterSticker150 = () => {
     const shopData = [
         {
             id: "1",
-            image: "/assets/ShopStick1.svg",
+            image: "/assets/ShopStick1.png",
             width: 577,
             height: 509,
             class: "sticker7"
         },
         {
             id: "2",
-            image: "/assets/Ms150dim.svg",
-            width: 577,
+            image: "/assets/Ms150dim.png",
+            width: 325,
             height: 389,
             class: "sticker8"
         },
         {
             id: "3",
-            image: "/assets/ShopStick4.svg",
+            image: "/assets/ShopStick4.png",
             width: 577,
             height: 573,
             class: "sticker9"
@@ -136,11 +136,11 @@ const MasterSticker150 = () => {
             <div className={styles.others}>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/Circle75.svg"
+                        src="/assets/Circle75.png"
                         alt='Product'
-                        width={246}
+                        width={366}
                         height={246}
-                        className={styles.circle}
+                        className={styles.circle1}
                     />
                     <span className={styles.name}>MasterSticker 75</span>
                     <Link
@@ -152,11 +152,11 @@ const MasterSticker150 = () => {
                 </div>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/Circle100.svg"
+                        src="/assets/Circle100.png"
                         alt='Product'
-                        width={246}
+                        width={326}
                         height={246}
-                        className={styles.circle}
+                        className={styles.circle2}
                     />
                     <span className={styles.name}>MasterSticker 100</span>
                     <Link
@@ -168,11 +168,11 @@ const MasterSticker150 = () => {
                 </div>
                 <div className={styles.col}>
                     <Image
-                        src="/assets/CircleTag.svg"
+                        src="/assets/CircleTag.png"
                         alt='Product'
-                        width={246}
+                        width={256}
                         height={246}
-                        className={styles.circle}
+                        className={styles.circle3}
                     />
                     <span className={styles.name}>MasterTag</span>
                     <Link

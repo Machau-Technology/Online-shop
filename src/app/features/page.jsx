@@ -19,11 +19,12 @@ const About = () => {
             <div className={styles.main}>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Track.svg"
+                        src="/assets/Track.png"
                         alt='Track'
                         width={400}
                         height={400}
                         className={styles.image}
+                        priority
                     />
                     <div className={styles.contents}>
                         <span className={styles.topic}>Keep Track</span>
@@ -37,7 +38,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/TableWithKey.svg"
+                        src="/assets/TableWithKey.png"
                         alt='Board'
                         width={400}
                         height={400}
@@ -54,7 +55,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Speak.svg"
+                        src="/assets/Speak.png"
                         alt='Speak'
                         width={400}
                         height={400}
@@ -71,7 +72,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Alerts.svg"
+                        src="/assets/Alerts.png"
                         alt='Alerts'
                         width={400}
                         height={400}
@@ -88,7 +89,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/History.svg"
+                        src="/assets/History.png"
                         alt='History'
                         width={400}
                         height={400}
@@ -106,7 +107,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Find.svg"
+                        src="/assets/Find.png"
                         alt='Find'
                         width={400}
                         height={400}
@@ -123,7 +124,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Together.svg"
+                        src="/assets/Together.png"
                         alt='Together'
                         width={400}
                         height={400}
@@ -141,7 +142,7 @@ const About = () => {
                 </div>
                 <div className={styles.row}>
                     <Image
-                        src="/assets/Scan.svg"
+                        src="/assets/Scan.png"
                         alt='Scan'
                         width={400}
                         height={400}

@@ -12,10 +12,10 @@ const Lost = () => {
                     <span className={styles.stickerHead}>MasterSticker</span>
                     <div className={styles.stickerInfo}>
                         <span className={styles.infoHead}>
-                        Peel It. Stick It. Get It.
+                            Peel It. Stick It. Get It.
                         </span>
                         <p className={styles.stickerDesc}>
-                        Unlock the magic of MasterSticker, India's pioneering QR Sticker, reuniting lost treasures with their cherished owners in a snap. Stick it to be found!
+                            Unlock the magic of MasterSticker, India's pioneering QR Sticker, reuniting lost treasures with their cherished owners in a snap. Stick it to be found!
                         </p>
                     </div>
                 </div>
@@ -25,12 +25,11 @@ const Lost = () => {
             </div>
 
             <Image
-                src="/assets/LostAndFound.svg"
-                width={346}
-                height={341}
+                src="/assets/LostAndFound.png"
+                width={410}
+                height={425}
                 alt="MasterSticker"
                 priority
-                quality={100}
                 className={styles.image}
             />
         </div>

@@ -31,10 +31,9 @@ const Find = () => {
             <div className={styles.right}>
                 <Image
                     className={styles.phonewk}
-                    src="/assets/PhoneWithKey.svg"
-                    width={684}
-                    height={684}
-                    quality={100}
+                    src="/assets/PhoneWithKey.gif"
+                    width={650}
+                    height={650}
                     alt='Phone with key'
                     priority
                 />

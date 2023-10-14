@@ -7,7 +7,7 @@ const Rechargeable = () => {
     return (
         <div className={styles.container}>
             <Image
-                src="/assets/Finding.svg"
+                src="/assets/Finding.png"
                 width={498}
                 height={398}
                 className={styles.image}
