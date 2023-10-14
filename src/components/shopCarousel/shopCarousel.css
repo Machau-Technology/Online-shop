@@ -24,12 +24,16 @@
 
     .slick-prev{
         top: 100px !important;
-        left: -110px !important;
+        left: 0px !important;
     }
 
     .slick-next{
         top: 100px !important;
-        right: 80px !important;
+        right: 0px !important;
+    }
+    .slick-slide img{
+        display:block;
+        margin-left:28%;
     }
 
 }
