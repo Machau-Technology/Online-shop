@@ -39,7 +39,7 @@ const BenefitsSticker = () => {
                     </span>
                 </div>
             </div>
-            <div className={`${styles.item} ${styles.msLast}`}>
+            <div className={`${styles.item2} ${styles.msLast}`}>
                 <Image
                     src="/assets/shield.gif"
                     width={75}
