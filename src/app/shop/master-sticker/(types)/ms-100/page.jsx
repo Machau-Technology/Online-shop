@@ -112,7 +112,7 @@ const MasterSticker100 = () => {
                         </button>
                         <Link
                             href="/shop/cart"
-                            className={styles.shopLink}
+                            className={styles.shopLink2}
                         >
                             <button
                                 className={styles.btn2}

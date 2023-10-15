@@ -1,232 +1,240 @@
-.container{
-    width: 100vw;
+.container {
+  width: 100vw;
 }
 
-.slider{
-    display: flex;
-    flex-direction: column;
-    gap: 280px;
-    width: 100%;
-    height: 926px;
-    background: linear-gradient(112deg, rgba(245, 182, 58, 0.90) 0%, rgba(245, 181, 58, 0.90) 96.54%);
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 280px;
+  width: 100%;
+  height: 926px;
+  background: linear-gradient(
+    112deg,
+    rgba(245, 182, 58, 0.9) 0%,
+    rgba(245, 181, 58, 0.9) 96.54%
+  );
 }
 
-.slideProduct{
-    position: relative;
-    margin-top: 250px;
+.slideProduct {
+  position: relative;
+  margin-top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head {
+  color: #181818;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.pCarousel {
+  /* width: 1250px; */
+  width: 83%;
+  height: 400px;
+  margin-left: 100px;
+  position: absolute;
+  top: -100px;
+  left: 30px;
+}
+
+.liner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 90px;
+  z-index: 10;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.info {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.amount {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  height: 48px;
+  width: 160px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.calc {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -2px;
+  cursor: pointer;
+}
+
+.shopLink {
+  width: 220px;
+  z-index: 10;
+}
+.shopLink2 {
+  width: 220px;
+  z-index: 10;
+}
+.btn2 {
+  width: 220px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #181818;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 464px) {
+  .slider {
+    gap: 65px;
+    height: 260px;
+  }
+
+  .slideProduct {
+    margin-top: 130px;
+  }
+
+  .head {
+    font-size: 40px;
+  }
+
+  .info {
+    font-size: 10px;
+  }
+
+  .amount {
+    /* display: block; */
+    font-size: 16px;
+  }
+
+  .btn1 {
+    width: 66px;
+    height: 20px;
+    padding: 10px;
+  }
+
+  .btn2 {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    /* margin: 0 0 0 95%; */
+  }
+
+  .calc {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .shopLink {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 6%;
+  }
+  .shopLink2 {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 30%;
+  }
+
+  .btn2 {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .liner {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    gap: 60px;
+  }
 
-.head{
-    color: #181818;
-    font-size: 200px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: -2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -30px;
-}
+  .left {
+    /* gap: 18px; */
+    display: none;
+  }
 
-.pCarousel{
+  .right {
+    gap: 10px;
+  }
+  .pCarousel {
     /* width: 1250px; */
     width: 83%;
     height: 400px;
-    margin-left: 100px;
+    margin-left: 0px;
     position: absolute;
     top: -100px;
     left: 30px;
-}
-
-.liner{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 90px;
-    z-index: 10;
-}
-
-.left{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.info{
-    color: #000;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.right{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-}
-
-.amount{
-    color: #000;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.btn1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    height: 48px;
-    width: 160px;
-    border-radius: 10px;
-    border: 1px solid #000;
-}
-
-.calc{
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: -2px;
-    cursor: pointer;
-}
-
-.shopLink{
-    width: 220px;
-    z-index: 10;
-}
-
-.btn2{
-    width: 220px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: #181818;
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-}
-
-
-@media screen and (max-width: 464px) {
-
-    .slider{
-        gap: 65px;
-        height: 260px;
-    }
-
-    .slideProduct{
-        margin-top: 130px;
-    }
-
-    .head{
-        font-size: 40px;
-    }
-
-    .info{
-        font-size: 10px;
-    }
-
-    .amount{
-        /* display: block; */
-        font-size: 16px;
-    }
-
-    .btn1{
-        width: 66px;
-        height: 20px;
-        padding: 10px;
-    }
-
-    .btn2 {
-        width: 80px;
-        height: 20px;
-        font-size: 10px;
-        margin: 0 0 0 95%;
-    }
-
-    .calc{
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-    .shopLink{
-        width: 80px;
-        height: 20px;
-    }
-
-    .btn2{
-        width: 80px;
-        height: 20px;
-        font-size: 10px;
-    }
-
-    .liner{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0 20px 0 20px;
-        gap: 60px;
-    }
-
-    .left{
-        /* gap: 18px; */
-        display: none;
-    }
-
-    .right{
-        gap: 10px;
-    }
-    .pCarousel{
-        /* width: 1250px; */
-        width: 83%;
-        height: 400px;
-        margin-left: 0px;
-        position: absolute;
-        top: -100px;
-        left: 30px;
-    }
-
-
+  }
 }
 
 @media screen and (max-width: 410px) {
-
-    .btn2 {
-        width: 80px;
-        height: 20px;
-        font-size: 10px;
-        margin: 0 0 0 85%;
-    }
+  .btn2 {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    /* margin: 0 0 0 85%; */
+  }
 }
 
 @media screen and (max-width: 395px) {
-
-    .btn2 {
-        width: 80px;
-        height: 20px;
-        font-size: 10px;
-        margin: 0 0 0 70%;
-    }
+  .btn2 {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    /* margin: 0 0 0 70%; */
+  }
 }
 @media screen and (max-width: 385px) {
-
-    .btn2 {
-        width: 80px;
-        height: 20px;
-        font-size: 10px;
-        margin: 0 0 0 62%;
-    }
+  .btn2 {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    /* margin: 0 0 0 62%; */
+  }
 }

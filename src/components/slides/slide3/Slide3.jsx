@@ -9,7 +9,7 @@ const Slide3 = () => {
             <div className={styles.column}>
                 <div className={styles.circle}>
                     <Image
-                        src="/assets/TagHome.svg"
+                        src="/assets/TagHome.png"
                         alt='Device1'
                         width={430}
                         height={390}
@@ -23,7 +23,7 @@ const Slide3 = () => {
             <div className={styles.column}>
                 <div className={styles.circle}>
                     <Image
-                        src="/assets/StickerHome.svg"
+                        src="/assets/StickerHome.png"
                         alt='Device2'
                         width={390}
                         height={280}
