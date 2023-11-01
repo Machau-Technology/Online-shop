@@ -143,7 +143,7 @@ const Shipping = () => {
             setActiveStep("payment");
 
             const response = await axiosInstance.post(
-              "/api/phonepe-integration",
+              "/api/payment/phonepe-integration",
               data
             );
             console.log(response);

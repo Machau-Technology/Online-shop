@@ -18,7 +18,7 @@ const Successful = () => {
 
   useEffect(() => {
     const getData = async () => {
-      let temp = await axiosInstance.post("/api/payment-info", {
+      let temp = await axiosInstance.post("/api/payment/payment-info", {
         transactionId: transactionId,
       });
       temp = temp.data[0];
