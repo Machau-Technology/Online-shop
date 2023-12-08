@@ -1,74 +1,86 @@
-.container{
-    height: 120px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    background-color: #F2F2F2;
+.container {
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  background-color: #f2f2f2;
 }
 
-.item{
-    display: flex;
-    gap: 40px;
-    align-items: center;
+.item {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-.gif{
-    border-radius: 50%;
-    border: 2px solid #000;
+.item2 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-.desc{
-    display: flex;
-    flex-direction: column;
+.gif {
+  border-radius: 50%;
+  border: 2px solid #000;
 }
 
-.upper{
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
+.desc {
+  display: flex;
+  flex-direction: column;
 }
 
-.lower{
-    color: #000;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
+.upper {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
 }
 
+.lower {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
 
 @media screen and (max-width: 464px) {
+  .container {
+    height: 228px;
+    flex-direction: column;
+    gap: 25px;
+  }
 
-    .container{
-        height: 228px;
-        flex-direction: column;
-        gap: 25px;
-    }
+  .item {
+    gap: 23px;
+  }
 
-    .item{
-        gap: 23px;
-    }
+  .item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .item2 {
+    gap: 50px;
+    padding-left: 20px;
+  }
 
-    .item:nth-child(2){
-        flex-direction: row-reverse;
-    }
+  .item2:nth-child(2) {
+    flex-direction: row-reverse;
+  }
 
-    .gif{
-        width: 50px;
-        height: 50px;
-    }
+  .gif {
+    width: 50px;
+    height: 50px;
+  }
 
-    .upper{
-        font-size: 14px;
-    }
+  .upper {
+    font-size: 14px;
+  }
 
-    .lower{
-        font-size: 10px;
-    }
+  .lower {
+    font-size: 12px;
+  }
 
-    .msLast{
-        margin-left: -30px;
-    }
+  .msLast {
+    margin-left: -30px;
+  }
 }
