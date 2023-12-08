@@ -1,6 +1,6 @@
 `use client`
 import axios from "axios";
-export const BASE_URL = "http://localhost:5000"
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL
 console.log({ BASE_URL })
 
 export const axiosInstance = axios.create({
