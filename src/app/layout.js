@@ -13,9 +13,9 @@ const poppins = Poppins({
 export const metadata = {
   title: 'MasterTag',
   description: `India's first smart tracking solutions`,
-  icons: {
-    icon: '/assets/Logo.png',
-  },
+  // icons: {
+  //   icon: '/assets/Logo.png',
+  // },
 }
 
 export default function RootLayout({ children }) {
